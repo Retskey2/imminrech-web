@@ -33,7 +33,7 @@ const Contact = () => {
       id="contact-us"
     >
       <main className="flex flex-col px-48 w-full">
-        <h1 className="text-[70px] mb-4 text-[#CEFF45]">
+        <h1 className="text-[70px] mb-4 text-[#CEFF45] font-semibold">
           Обсудить детали проекта
         </h1>
         <form onSubmit={handleSubmit} className="mt-8 mb-2 ">

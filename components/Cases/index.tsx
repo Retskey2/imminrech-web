@@ -7,7 +7,7 @@ const Cases = () => {
   return (
     <section className="bg-[#121212] pt-20 pb-14 flex justify-start" id="cases">
       <main className="flex flex-col gap-12 px-48 w-full">
-        <h1 className="text-[70px]">КЕЙСЫ</h1>
+        <h1 className="text-[70px] font-bold">КЕЙСЫ</h1>
         <div className="flex gap-10 justify-between">
           {cases.map((item) => (
             <CasesItem

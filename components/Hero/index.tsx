@@ -4,15 +4,15 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex mt-24 gap-20 mb-40 px-48">
+    <div className="flex mt-24 gap-20 mb-80 px-48 items-center">
       <main>
-        <h1 className="text-[70px] font-medium mb-10">
+        <h1 className="text-[70px] font-bold mb-10 leading-tight">
           СОЗДАЕМ УДОБНЫЕ <br /> ЦИФРОВЫЕ ПРОДУКТЫ
         </h1>
-        <h2 className="text-3xl text-[#9C9C9C] mb-16">
+        <h2 className="text-3xl text-[#9C9C9C] mb-16 font-light">
           Дизайн, проектирование и разработка программного обеспечения.
         </h2>
-        <button className="px-16 py-4 border-solid border-[0.5px] font-medium border-white rounded text-xl hover:bg-[#CEFF45] hover:border-[#CEFF45] hover:text-black">
+        <button className="px-16 py-4 border-solid font-light border-[0.5px] border-white rounded text-xl hover:bg-[#CEFF45] hover:border-[#CEFF45] hover:text-black">
           Обсудить проект
         </button>
       </main>

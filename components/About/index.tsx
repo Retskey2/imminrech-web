@@ -4,8 +4,8 @@ const About = () => {
   return (
     <section className="bg-[#121212] py-28 flex justify-start " id="about-us">
       <main className="flex flex-col gap-12 px-48">
-        <h1 className="text-[70px]">О НАС</h1>
-        <h2 className="text-[#9C9C9C] text-[32px]">
+        <h1 className="text-[70px] font-medium">О НАС</h1>
+        <h2 className="text-[#9C9C9C] text-[32px] font-light">
           ИММИНТЭК - современная IT-компания, которая занимается разработкой
           программного обеспечения и созданием сайтов.
         </h2>

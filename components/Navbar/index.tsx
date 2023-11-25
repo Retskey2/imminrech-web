@@ -37,7 +37,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex justify-end gap-3">
+        <div className="flex justify-end gap-3 font-normal">
           <button className="px-4 py-2 border-solid border-white border-[1px] font-normal rounded flex items-center gap-2">
             <Image draggable={false} priority alt="telegram" src={whatsapp} />
             WhatsApp
