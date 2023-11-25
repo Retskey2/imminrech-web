@@ -10,8 +10,8 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
   const [isVisibility, setIsVisibility] = useState(false);
 
   return (
-    <li className="py-5 border-b-[1px] border-white flex justify-between flex-col text-[26px] transition-all ease-out duration-100">
-      <div className="flex justify-between">
+    <li className="py-5 border-b-[1px] border-white w-full flex justify-between flex-col text-[26px] transition-all ease-out duration-100">
+      <div className="flex justify-between w-full">
         <span>{title}</span>
         <span
           className="underline cursor-pointer"

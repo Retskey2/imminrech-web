@@ -4,8 +4,8 @@ import { services } from "@/constants";
 
 const Services = () => {
   return (
-    <section className="pt-20 pb-14 flex justify-center" id="services">
-      <main className="w-[1220px] flex flex-col gap-12">
+    <section className="pt-20 pb-14 flex justify-start " id="services">
+      <main className="flex flex-col gap-12 px-48 w-full">
         <h1 className="text-[70px]">УСЛУГИ</h1>
         <ul className="flex justify-between ">
           <li className="max-w-[380px] text-[32px] border-b-[1px] border-white pb-5">

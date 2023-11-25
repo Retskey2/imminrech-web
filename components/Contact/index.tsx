@@ -29,11 +29,13 @@ const Contact = () => {
 
   return (
     <section
-      className="bg-[#121212] pt-20 pb-14 flex justify-center"
+      className="bg-[#121212] pt-20 pb-14 flex justify-start"
       id="contact-us"
     >
-      <main className="w-[1220px] flex flex-col">
-        <h1 className="text-[70px] text-[#CEFF45]">Обсудить детали проекта</h1>
+      <main className="flex flex-col px-48 w-full">
+        <h1 className="text-[70px] mb-4 text-[#CEFF45]">
+          Обсудить детали проекта
+        </h1>
         <form onSubmit={handleSubmit} className="mt-8 mb-2 ">
           <div className="grid grid-cols-2 grid-rows-2 mb-12 gap-4 gap-y-14">
             <div>
@@ -90,8 +92,8 @@ const Contact = () => {
             </div>
           </div>
           <button
-            className="px-16 py-2 border-white border-[1px] text-[18px] rounded-md"
             type="submit"
+            className="px-16 py-4 border-solid border-[0.5px] font-medium border-white rounded text-xl hover:bg-[#CEFF45] hover:border-[#CEFF45] hover:text-black"
           >
             Отправить
           </button>
