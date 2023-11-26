@@ -11,7 +11,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
 
   return (
     <li className="py-5 border-b-[1px] border-white w-full flex justify-between flex-col text-[26px] transition-all ease-out duration-100">
-      <div className="flex justify-between w-full font-semibold">
+      <div className="flex justify-between w-full font-semibold lg:text-[22px] xl:text-[32px] text-[22px]">
         <span>{title}</span>
         <span
           className="cursor-pointer"

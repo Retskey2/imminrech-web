@@ -23,7 +23,7 @@ const CasesItem: React.FC<CasesItemProps> = ({ title, description, image }) => {
       <div className="uppercase tracking-[1.3px] font-bold mb-4 mt-8 text-[#CEFF45]">
         {title}
       </div>
-      <p className="text-[26px] font-semibold">{description}</p>
+      <p className="xl:text-[26px] text-[18px] font-semibold">{description}</p>
     </div>
   );
 };

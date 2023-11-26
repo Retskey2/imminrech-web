@@ -10,16 +10,16 @@ const Services = () => {
           УСЛУГИ
         </h1>
         <ul className="flex flex-wrap lg:flex-nowrap gap-6 justify-center 2xl:justify-between">
-          <li className="max-w-[380px] text-[32px] border-b-[1px] border-white pb-5">
+          <li className="max-w-[380px] border-b-[1px] border-white pb-5  lg:text-[26px] xl:text-[32px] text-[22px]">
             <span className="font-bold"> Этап 1.</span> Исследуем
             ваш бизнес-процесс, чтобы полностью понять его особенности
             и потребности.
           </li>
-          <li className="max-w-[380px] text-[32px] border-b-[1px] border-white pb-5">
+          <li className="max-w-[380px] border-b-[1px] border-white pb-5  lg:text-[26px] xl:text-[32px] text-[22px]">
             <span className="font-bold"> Этап 2.</span> Спроектируем
             и разработаем цифровые решения для вашего бизнеса.
           </li>
-          <li className="max-w-[380px] text-[32px] border-b-[1px] border-white pb-5">
+          <li className="max-w-[380px] border-b-[1px] border-white pb-5  lg:text-[26px] xl:text-[32px] text-[22px]">
             <span className="font-bold">Этап 3.</span> Внедрим и обеспечим
             интеграции с используемыми сервисами.
           </li>
