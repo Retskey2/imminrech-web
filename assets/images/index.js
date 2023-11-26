@@ -10,14 +10,13 @@ import toBodyIcon from "./to-body.svg";
 import syleymanovaIcon from "./Syleymanova.svg";
 import zokIcon from "./zok.svg";
 
+import backgroundHeroPromo from "./backgroundHeroPromo.png";
 export {
   headerLogo,
-  backgroundPromo,
-  iphone,
-  star,
   telegram,
   whatsapp,
   toBodyIcon,
   syleymanovaIcon,
   zokIcon,
+  backgroundHeroPromo,
 };

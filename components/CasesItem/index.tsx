@@ -10,7 +10,7 @@ interface CasesItemProps {
 
 const CasesItem: React.FC<CasesItemProps> = ({ title, description, image }) => {
   return (
-    <div className="border-[1px] rounded-md px-5 py-10 w-full">
+    <div className="border-[1px] rounded-md px-5 py-10 w-full max-w-[360px]">
       <div className="">
         <div className="bg-white w-full h-64 rounded-xl flex justify-center items-center p-8">
           <Image

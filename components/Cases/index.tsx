@@ -5,10 +5,15 @@ import { cases } from "@/constants";
 
 const Cases = () => {
   return (
-    <section className="bg-[#121212] pt-20 pb-14 flex justify-start" id="cases">
-      <main className="flex flex-col gap-12 px-48 w-full">
-        <h1 className="text-[70px] font-bold">КЕЙСЫ</h1>
-        <div className="flex gap-10 justify-between">
+    <section
+      className="bg-[#121212] pt-20 pb-14 flex justify-start "
+      id="cases"
+    >
+      <main className="flex flex-col gap-12 xl:px-48 lg:px-8 px-6 w-full">
+        <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-medium text-center 2xl:text-start">
+          КЕЙСЫ
+        </h1>
+        <div className="flex flex-wrap lg:flex-nowrap gap-6 justify-center 2xl:justify-between">
           {cases.map((item) => (
             <CasesItem
               description={item.description}

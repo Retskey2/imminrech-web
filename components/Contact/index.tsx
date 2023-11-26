@@ -32,12 +32,12 @@ const Contact = () => {
       className="bg-[#121212] pt-20 pb-14 flex justify-start"
       id="contact-us"
     >
-      <main className="flex flex-col px-48 w-full">
-        <h1 className="text-[70px] mb-4 text-[#CEFF45] font-semibold">
+      <main className="flex flex-col xl:px-48 lg:px-8 px-6 w-full">
+        <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-medium text-center 2xl:text-start text-[#CEFF45] ">
           Обсудить детали проекта
         </h1>
         <form onSubmit={handleSubmit} className="mt-8 mb-2 ">
-          <div className="grid grid-cols-2 grid-rows-2 mb-12 gap-4 gap-y-14">
+          <div className="grid lg:grid-cols-2 lg:grid-rows-2 grid-cols-1 grid-rows-4 mb-12 gap-4 gap-y-14">
             <div>
               <label htmlFor="form-company">Компания </label>
               <input
