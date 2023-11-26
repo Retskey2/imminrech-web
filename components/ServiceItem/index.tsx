@@ -14,10 +14,10 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
       <div className="flex justify-between w-full font-semibold">
         <span>{title}</span>
         <span
-          className="underline cursor-pointer"
+          className="cursor-pointer"
           onClick={() => setIsVisibility(!isVisibility)}
         >
-          Подробнее →
+          <span className="underline">Подробнее</span> →
         </span>
       </div>
 
