@@ -30,7 +30,7 @@ const Hero = () => {
       onMouseMove={handleMouseMove}
     >
       <main className="lg:text-left text-center z-20">
-        <h1 className="md:text-[35px] lg:text-[50px] 2xl:text-[70px] text-[25px] xl:font-bold font-semibold mb-[16px] 2xl:mb-10 leading-tight mt-10 whitespace-nowrap  2xlmax:whitespace-normal">
+        <h1 className="md:text-[35px] lg:text-[50px] 2xl:text-[70px] text-[25px] xl:font-extrabold font-semibold mb-[16px] 2xl:mb-10 leading-tight mt-10 whitespace-nowrap  2xlmax:whitespace-normal">
           СОЗДАЕМ УДОБНЫЕ <br /> ЦИФРОВЫЕ ПРОДУКТЫ
         </h1>
         <h2 className="max-w-[1000px] md:text-[22px] lg:text-[28px] xl:text-[32px] text-[14px] text-[#9C9C9C] mb-[30px] 2xl:mb-[50px] font-light">

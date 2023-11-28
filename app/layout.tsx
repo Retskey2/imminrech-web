@@ -11,10 +11,9 @@ export const metadata: Metadata = {
 };
 
 export const rubik = Rubik({
-  style: ["normal", "italic"],
+  style: ["normal"],
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
 });
 
 export default function RootLayout({

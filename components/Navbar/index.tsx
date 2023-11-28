@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { headerLogo, telegram, whatsapp } from "@/assets/images";
+import { telegram, whatsapp } from "@/assets/images";
 import { hamburger } from "@/assets/icons";
 
 import { navLinks } from "@/constants";
