@@ -62,11 +62,39 @@ const Hero = () => {
           alt=""
           src={iphone}
         />
-        <div className="w-full">
+        <div
+          className="w-full"
+          style={{
+            transform: `translate(${position.star.x}px, ${position.star.y}px)`,
+          }}
+        >
+          <Image
+            width={84}
+            className="absolute bottom-4 -left-6"
+            priority
+            draggable={false}
+            alt="star"
+            src={star}
+          />
           <Image
             width={32}
-            className="absolute top-12 left-18"
-            style={{}}
+            className="absolute top-36 left-[92px]"
+            priority
+            draggable={false}
+            alt="star"
+            src={star}
+          />
+          <Image
+            width={105}
+            className="absolute top-16 -right-8"
+            priority
+            draggable={false}
+            alt="star"
+            src={star}
+          />{" "}
+          <Image
+            width={69}
+            className="absolute top-[132px] right-8"
             priority
             draggable={false}
             alt="star"

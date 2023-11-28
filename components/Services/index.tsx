@@ -9,7 +9,7 @@ const Services = () => {
       id="services"
     >
       <main className="flex flex-col gap-12 xl:px-48 lg:px-8 px-6 w-full">
-        <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-medium text-center 2xl:text-start">
+        <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-bold text-center 2xl:text-start">
           УСЛУГИ
         </h1>
         <ul className="flex flex-wrap lg:flex-nowrap gap-6 justify-center 2xl:justify-between">

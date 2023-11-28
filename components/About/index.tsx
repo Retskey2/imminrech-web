@@ -8,10 +8,10 @@ const About = () => {
       id="about-us"
     >
       <main className="flex flex-col gap-12 xl:px-48 lg:px-8 px-6">
-        <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-medium text-center 2xl:text-start">
+        <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-bold text-center 2xl:text-start">
           О НАС
         </h1>
-        <h2 className="text-[#9C9C9C] xl:text-[32px] text-[22px] font-light max-w-[1000px]">
+        <h2 className="text-[#9C9C9C] xl:text-[32px] text-[22px] font-light max-w-[1000px] leading-8">
           ИММИНТЭК - современная IT-компания, которая занимается разработкой
           программного обеспечения и созданием сайтов.
         </h2>

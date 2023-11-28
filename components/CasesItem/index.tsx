@@ -10,7 +10,7 @@ interface CasesItemProps {
 
 const CasesItem: React.FC<CasesItemProps> = ({ title, description, image }) => {
   return (
-    <div className="border-[1px] flex rounded-3xl px-5 py-10 w-full flex-col md:max-w-[360px] xl:max-w-none">
+    <div className="border-[1px] flex rounded-3xl px-5 py-10 w-full flex-col max-w-[360px] 2xl:max-w-none">
       <div className="flex justify-center items-center bg-white w-full rounded-xl p-8 h-[262px]">
         <Image
           draggable={false}
