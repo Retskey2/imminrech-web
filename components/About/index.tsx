@@ -1,8 +1,12 @@
-import React from "react";
+import useMousePosition from "@/hooks/useMousePosition";
+import React, { useState } from "react";
 
 const About = () => {
   return (
-    <section className="bg-[#121212] py-28 flex justify-start " id="about-us">
+    <section
+      className="flex justify-start bg-[#121212] py-[210px]"
+      id="about-us"
+    >
       <main className="flex flex-col gap-12 xl:px-48 lg:px-8 px-6">
         <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-medium text-center 2xl:text-start">
           О НАС

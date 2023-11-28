@@ -7,23 +7,29 @@ interface ServiceItemProps {
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
-  const [isVisibility, setIsVisibility] = useState(false);
+  const [isHovering, setIsHovered] = useState(false);
+  const onMouseEnter = () => setIsHovered(true);
+  const onMouseLeave = () => setIsHovered(false);
 
   return (
     <li className="py-5 border-b-[1px] border-white w-full flex justify-between flex-col text-[26px] transition-all ease-out duration-100">
-      <div className="flex justify-between w-full font-semibold lg:text-[22px] xl:text-[32px] text-[22px]">
+      <div
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        className="flex justify-between items-center w-full font-semibold lg:text-[22px] xl:text-[32px] text-[22px]"
+      >
         <span>{title}</span>
-        <span
-          className="cursor-pointer"
-          onClick={() => setIsVisibility(!isVisibility)}
-        >
-          <span className="underline">Подробнее</span> →
+        <span className="cursor-pointer text-[16px] font-light">
+          <a className="underline" href={"#contact-us"}>
+            Подробнее
+          </a>{" "}
+          →
         </span>
       </div>
 
       <p
         className={`mt-2 text-[16px] max-w-[1000px] ${
-          isVisibility
+          isHovering
             ? "opacity-100 max-h-[500px] transition-all duration-300 ease-in"
             : "opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-out"
         }`}

@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <section
-      className="bg-[#121212] pt-20 pb-14 flex justify-start"
+      className="bg-[#121212] py-[210px] flex justify-start"
       id="contact-us"
     >
       <main className="flex flex-col xl:px-48 lg:px-8 px-6 w-full">

@@ -4,7 +4,7 @@ import { services } from "@/constants";
 
 const Services = () => {
   return (
-    <section className="pt-20 pb-14 flex justify-start " id="services">
+    <section className="py-[210px] flex justify-start " id="services">
       <main className="flex flex-col gap-12 xl:px-48 lg:px-8 px-6 w-full">
         <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-medium text-center 2xl:text-start">
           УСЛУГИ

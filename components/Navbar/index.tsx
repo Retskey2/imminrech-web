@@ -2,13 +2,32 @@
 
 import Image from "next/image";
 import { headerLogo, telegram, whatsapp } from "@/assets/images";
+import { hamburger } from "@/assets/icons";
+
 import { navLinks } from "@/constants";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      setIsScrolled(currentScrollY > 0 && currentScrollY > lastScrollY);
+      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+    };
+
+    let lastScrollY = 0;
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleNav = () => {
     setShowNav(!showNav);
@@ -16,12 +35,12 @@ const Navbar = () => {
 
   return (
     <header className="padding-x py-8 w-full">
-      <nav className="grid grid-cols-3 items-center">
+      <nav className="grid grid-cols-navbar max-lg:grid-cols-2 items-center">
         <Link href="/">
           <Image priority src={headerLogo} alt="logo" width={130} height={29} />
         </Link>
 
-        <ul className="grid grid-cols-4 justify-center items-center gap-x-4">
+        <ul className="grid grid-cols-4 justify-center items-center max-lg:hidden justify-self-center">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
@@ -37,18 +56,18 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex justify-end gap-3 font-normal">
-          <button className="px-4 py-2 border-solid border-white border-[1px] font-normal rounded flex items-center gap-2">
-            <Image draggable={false} priority alt="telegram" src={whatsapp} />
+        <div className="flex justify-end gap-3 font-normal max-lg:hidden justify-self-center">
+          <button className="hover:bg-black px-4 py-2 border-solid border-white border-[1px] font-normal rounded flex items-center gap-2">
+            <Image draggable={false} priority alt="telegram" src={telegram} />
             WhatsApp
           </button>
-          <button className="px-4 py-2 border-solid border-white border-[1px] font-normal rounded flex items-center gap-2">
+          <button className="hover:bg-black px-4 py-2 border-solid border-white border-[1px] font-normal rounded flex items-center gap-2">
             <Image draggable={false} priority alt="whatsapp" src={whatsapp} />
             Telegram
           </button>
         </div>
 
-        {/* <div className="hidden max-lg:block  ">
+        <div className="hidden max-lg:block justify-self-end">
           <Image
             src={hamburger}
             alt="hamburger"
@@ -59,7 +78,7 @@ const Navbar = () => {
               showNav ? "inline-block rotate-90" : ""
             }`}
           />
-        </div> */}
+        </div>
       </nav>
     </header>
   );
