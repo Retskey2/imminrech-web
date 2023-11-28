@@ -16,19 +16,19 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
       <div
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        className="flex justify-between items-center w-full font-semibold lg:text-[22px] xl:text-[32px] text-[22px]"
+        className="flex justify-between items-center w-full font-light xl:text-[32px] text-[22px]"
       >
         <span>{title}</span>
-        <span className="cursor-pointer text-[16px] font-light">
-          <a className="underline" href={"#contact-us"}>
+        <span className="flex cursor-pointer text-[16px] gap-1 font-light">
+          <a className="" href={"#contact-us"}>
             Подробнее
-          </a>{" "}
+          </a>
           →
         </span>
       </div>
 
       <p
-        className={`mt-2 text-[16px] max-w-[1000px] ${
+        className={`mt-2 text-[16px] max-w-[1000px] font-normal${
           isHovering
             ? "opacity-100 max-h-[500px] transition-all duration-300 ease-in"
             : "opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-out"

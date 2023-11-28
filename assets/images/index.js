@@ -1,5 +1,5 @@
 import headerLogo from "./header-logo.svg";
-import backgroundPromo from "./background-promo.svg";
+import backgroundHeroPromo from "./background-promo.svg";
 import iphone from "./iphone.svg";
 import star from "./star.svg";
 
@@ -10,7 +10,6 @@ import toBodyIcon from "./to-body.svg";
 import syleymanovaIcon from "./Syleymanova.svg";
 import zokIcon from "./zok.svg";
 
-import backgroundHeroPromo from "./backgroundHeroPromo.png";
 export {
   headerLogo,
   telegram,
@@ -19,4 +18,6 @@ export {
   syleymanovaIcon,
   zokIcon,
   backgroundHeroPromo,
+  iphone, 
+  star
 };

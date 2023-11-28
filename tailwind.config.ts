@@ -8,15 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      fontFamily: {},
       gridTemplateColumns: {
-        // Complex site-specific column configuration
         navbar: "150px minmax(200px, 1fr) minmax(max-content, 300px)",
+        hero: "1fr minmax(380px, 540px)",
+      },
+      screens: {
+        "1600xl": { max: "1600px" },
       },
     },
   },

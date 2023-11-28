@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const About = () => {
   return (
     <section
-      className="flex justify-start bg-[#121212] py-[210px]"
+      className="flex justify-start bg-[#121212] lg:py-[210px] py-[55px]"
       id="about-us"
     >
       <main className="flex flex-col gap-12 xl:px-48 lg:px-8 px-6">
@@ -15,7 +15,7 @@ const About = () => {
           ИММИНТЭК - современная IT-компания, которая занимается разработкой
           программного обеспечения и созданием сайтов.
         </h2>
-        <ul className="flex flex-col md:gap-[55px] gap-[30px] xl:text-[32px] text-[22px] font-light leading-8 ">
+        <ul className="flex flex-col md:gap-[55px] gap-[30px] xl:text-[32px] text-[22px] font-light leading-8">
           <li className="max-w-[600px]">
             Уделяем много времени исследованию и проектированию.
           </li>

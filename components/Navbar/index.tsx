@@ -35,17 +35,17 @@ const Navbar = () => {
 
   return (
     <header className="padding-x py-8 w-full">
-      <nav className="grid grid-cols-navbar max-lg:grid-cols-2 items-center">
+      <nav className="grid lg:grid-cols-navbar grid-cols-2 items-center">
         <Link href="/">
-          <Image priority src={headerLogo} alt="logo" width={130} height={29} />
+          <div className="text-[25px] font-light text-[#CEFF45]">ImminTech</div>
         </Link>
 
-        <ul className="grid grid-cols-4 justify-center items-center max-lg:hidden justify-self-center">
+        <ul className="lg:grid grid-cols-4 text-[16px] font-light justify-center items-center hidden justify-self-center">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                className=" text-[16px] font-normal leading-normal text-lg text-slate-gray
+                className="leading-normal text-lg text-slate-gray
                 hover:border-b-2
                 hover:border-[#CEFF45] 
                 hover:text-[#CEFF45]"
@@ -56,18 +56,18 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex justify-end gap-3 font-normal max-lg:hidden justify-self-center">
-          <button className="hover:bg-black px-4 py-2 border-solid border-white border-[1px] font-normal rounded flex items-center gap-2">
+        <div className="lg:flex justify-end gap-3 font-normal hidden justify-self-center">
+          <button className="hover:bg-black px-4 py-2 border-solid border-white border-[0.5px] font-normal rounded flex items-center gap-2">
             <Image draggable={false} priority alt="telegram" src={telegram} />
             WhatsApp
           </button>
-          <button className="hover:bg-black px-4 py-2 border-solid border-white border-[1px] font-normal rounded flex items-center gap-2">
+          <button className="hover:bg-black px-4 py-2 border-solid border-white border-[0.5px] font-normal rounded flex items-center gap-2">
             <Image draggable={false} priority alt="whatsapp" src={whatsapp} />
             Telegram
           </button>
         </div>
 
-        <div className="hidden max-lg:block justify-self-end">
+        <div className="lg:hidden block justify-self-end">
           <Image
             src={hamburger}
             alt="hamburger"

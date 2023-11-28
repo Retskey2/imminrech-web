@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <section
-      className="bg-[#121212] py-[210px] flex justify-start"
+      className="bg-[#121212] lg:py-[210px] py-[55px] flex justify-start"
       id="contact-us"
     >
       <main className="flex flex-col xl:px-48 lg:px-8 px-6 w-full">
@@ -37,9 +37,11 @@ const Contact = () => {
           Обсудить детали проекта
         </h1>
         <form onSubmit={handleSubmit} className="mt-8 mb-2 ">
-          <div className="grid lg:grid-cols-2 lg:grid-rows-2 grid-cols-1 grid-rows-4 mb-12 gap-4 gap-y-14">
+          <div className="grid lg:grid-cols-2 lg:grid-rows-2 grid-cols-1 grid-rows-4 mb-12 gap-4 gap-y-14 text-[18px]">
             <div>
-              <label htmlFor="form-company">Компания </label>
+              <label htmlFor="form-company" className="font-medium">
+                Компания
+              </label>
               <input
                 id="form-company"
                 required
@@ -51,7 +53,9 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="form-name">ФИО</label>
+              <label htmlFor="form-name" className="font-medium">
+                ФИО
+              </label>
               <input
                 id="form-name"
                 required
@@ -65,7 +69,9 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="form-phone">Номер телефона</label>
+              <label htmlFor="form-phone" className="font-medium">
+                Номер телефона
+              </label>
               <input
                 id="form-phone"
                 required
@@ -78,7 +84,9 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="form-email">Почта</label>
+              <label htmlFor="form-email" className="font-medium">
+                Почта
+              </label>
               <input
                 id="form-email"
                 required
