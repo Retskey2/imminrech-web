@@ -17,12 +17,8 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
 	const onMouseLeave = () => setIsHovered(false);
 
 	return (
-		<li className={styles.serviceItem}>
-			<div
-				onMouseEnter={onMouseEnter}
-				onMouseLeave={onMouseLeave}
-				className={styles.titleContainer}
-			>
+		<li className={styles.serviceItem} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+			<div className={styles.titleContainer}>
 				<p>{title}</p>
 				<span className=''>
 					<a href={'#contact-us'}>Подробнее</a>→

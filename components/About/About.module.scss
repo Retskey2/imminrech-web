@@ -3,21 +3,25 @@
 }
 
 .aboutContent {
-	@apply flex flex-col gap-12 px-6 lg:px-8 xl:px-48 z-10;
+	@apply px-6 lg:px-8 xl:px-48 z-10 m-auto max-w-[1920px] w-full;
 
-	h1 {
-		@apply text-center text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
-	}
+	>div {
+		@apply w-full flex flex-col gap-12;
 
-	h2 {
-		@apply max-w-[1000px] text-[22px] font-light leading-8 text-[#9C9C9C] xl:text-[32px];
-	}
+		h1 {
+			@apply text-center text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
+		}
 
-	ul {
-		@apply flex flex-col gap-[30px] text-[22px] font-light leading-8 md:gap-[55px] xl:text-[32px];
+		h2 {
+			@apply text-[22px] font-light leading-8 text-[#9C9C9C] xl:text-[32px];
+		}
 
-		li {
-			@apply max-w-[600px];
+		ul {
+			@apply flex flex-col gap-[30px] text-[22px] font-light leading-8 md:gap-[55px] xl:text-[32px];
+
+			li {
+				@apply max-w-[600px];
+			}
 		}
 	}
 }

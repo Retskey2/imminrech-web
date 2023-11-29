@@ -1,12 +1,12 @@
 .casesItem {
-	@apply flex w-full max-w-[360px] flex-col rounded-3xl border-[1px] px-5 py-10 2xl:max-w-none;
+	@apply w-[400px] 2xl:w-full flex flex-col rounded-3xl border-[1px] px-5 pb-[49px] pt-[46px];
 
 	.itemImageContainer {
-		@apply flex h-[262px] w-full items-center justify-center rounded-xl bg-white p-8;
+		@apply flex h-[300px] w-full items-center justify-center rounded-xl bg-white p-8;
 	}
 
 	.itemTitle {
-		@apply mb-4 mt-8 text-[14px] font-bold uppercase tracking-[1.3px] text-[#CEFF45];
+		@apply mb-[15px] mt-[36px] text-[14px] font-bold uppercase tracking-[1.3px] text-[#CEFF45];
 	}
 
 	.itemDescription {
