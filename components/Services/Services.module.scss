@@ -1,0 +1,23 @@
+.serviceSection {
+	@apply flex justify-start py-[55px] lg:py-[210px];
+
+	.serviceContainer {
+		@apply flex w-full flex-col gap-12 px-6 lg:px-8 xl:px-48;
+
+		> h1 {
+			@apply text-center text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
+		}
+
+		> .serviceStageMenu {
+			@apply flex flex-wrap justify-center gap-6 lg:flex-nowrap 2xl:justify-between;
+
+			> li {
+				@apply max-w-[380px] border-b-[1px] border-white pb-5 text-[22px] font-light lg:text-[26px] xl:text-[32px];
+			}
+		}
+
+		> .serviceItemMenu {
+			@apply mt-20 flex flex-col gap-[10px];
+		}
+	}
+}

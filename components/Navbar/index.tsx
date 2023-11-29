@@ -1,87 +1,63 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { telegram, whatsapp } from "@/assets/images";
-import { hamburger } from "@/assets/icons";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-import { navLinks } from "@/constants";
+import { hamburger } from '@/assets/icons';
+import { telegram, whatsapp } from '@/assets/images';
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import styles from './Navbar.module.scss';
+import { navLinks } from '@/constants';
 
 const Navbar = () => {
-  const [showNav, setShowNav] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+	const [showNav, setShowNav] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+	const handleNav = () => {
+		setShowNav(!showNav);
+	};
 
-      setIsScrolled(currentScrollY > 0 && currentScrollY > lastScrollY);
-      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
-    };
+	return (
+		<header className={styles.header}>
+			<nav className={styles.nav}>
+				<Link href='/'>
+					<h1 className={styles.logo}>ImminTech</h1>
+				</Link>
 
-    let lastScrollY = 0;
+				<ul className={styles.navList} role='menu'>
+					{navLinks.map((link) => (
+						<li key={link.label} role='menuitem'>
+							<a href={link.href} className={styles.navLink}>
+								{link.label}
+							</a>
+						</li>
+					))}
+				</ul>
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+				<div className={styles.actions}>
+					<button className={styles.actionButton}>
+						<Image draggable={false} priority alt='telegram' src={whatsapp} />
+						WhatsApp
+					</button>
+					<button className={styles.actionButton}>
+						<Image draggable={false} priority alt='whatsapp' src={telegram} />
+						Telegram
+					</button>
+				</div>
 
-  const handleNav = () => {
-    setShowNav(!showNav);
-  };
-
-  return (
-    <header className="padding-x py-8 w-full">
-      <nav className="grid lg:grid-cols-navbar grid-cols-2 items-center">
-        <Link href="/">
-          <div className="text-[25px] font-light text-[#CEFF45]">ImminTech</div>
-        </Link>
-
-        <ul className="lg:grid grid-cols-4 text-[16px] font-light justify-center items-center hidden justify-self-center">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="leading-normal text-lg text-slate-gray
-                hover:border-b-2
-                hover:border-[#CEFF45] 
-                hover:text-[#CEFF45]"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="lg:flex justify-end gap-3 font-normal hidden justify-self-center">
-          <button className="hover:bg-black px-4 py-2 border-solid border-white border-[0.5px] font-normal rounded flex items-center gap-2">
-            <Image draggable={false} priority alt="telegram" src={telegram} />
-            WhatsApp
-          </button>
-          <button className="hover:bg-black px-4 py-2 border-solid border-white border-[0.5px] font-normal rounded flex items-center gap-2">
-            <Image draggable={false} priority alt="whatsapp" src={whatsapp} />
-            Telegram
-          </button>
-        </div>
-
-        <div className="lg:hidden block justify-self-end">
-          <Image
-            src={hamburger}
-            alt="hamburger"
-            width={25}
-            height={25}
-            onClick={handleNav}
-            className={` cursor-pointer lg:hidden ${
-              showNav ? "inline-block rotate-90" : ""
-            }`}
-          />
-        </div>
-      </nav>
-    </header>
-  );
+				<div className={styles.hamburger}>
+					<Image
+						src={hamburger}
+						alt='hamburger'
+						width={25}
+						height={25}
+						onClick={handleNav}
+						className={` cursor-pointer lg:hidden ${showNav ? 'inline-block rotate-90' : ''}`}
+					/>
+				</div>
+			</nav>
+		</header>
+	);
 };
 
 export default Navbar;

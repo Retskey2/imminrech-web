@@ -1,0 +1,31 @@
+.header {
+	@apply w-full px-8 py-8 sm:px-16;
+}
+
+.nav {
+	@apply grid grid-cols-2 items-center lg:grid-cols-2xnavbar 2xl:grid-cols-navbar;
+}
+
+.logo {
+	@apply text-[25px] font-light text-[#CEFF45];
+}
+
+.navList {
+	@apply hidden grid-cols-4 items-center justify-center gap-32 justify-self-center text-[16px] font-light lg:grid;
+}
+
+.navLink {
+	@apply text-lg leading-normal hover:border-b-2 hover:border-[#CEFF45] hover:text-[#CEFF45];
+}
+
+.actions {
+	@apply hidden justify-end gap-3 justify-self-center font-normal 2xl:flex;
+}
+
+.actionButton {
+	@apply flex items-center gap-2 rounded border-[0.5px] border-solid border-white px-4 py-[11px] font-normal hover:bg-black;
+}
+
+.hamburger {
+	@apply block justify-self-end lg:hidden;
+}

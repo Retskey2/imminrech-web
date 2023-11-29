@@ -1,0 +1,15 @@
+.casesSection {
+	@apply flex justify-start bg-[#121212] py-[55px] lg:py-[210px];
+}
+
+.casesContent {
+	@apply flex w-full flex-col gap-12 px-6 lg:px-8 xl:px-48;
+
+	h1 {
+		@apply text-center text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
+	}
+
+	.casesList {
+		@apply flex flex-wrap justify-center gap-6 lg:flex-nowrap 2xl:justify-between;
+	}
+}

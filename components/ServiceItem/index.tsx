@@ -1,43 +1,43 @@
-"use client";
-import React, { useState } from "react";
+'use client';
+
+import cn from 'classnames';
+import React, { useState } from 'react';
+
+import styles from './ServiceItem.module.scss';
 
 interface ServiceItemProps {
-  title: string;
-  description: string;
+	title: string;
+	description: string;
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
-  const [isHovering, setIsHovered] = useState(false);
-  const onMouseEnter = () => setIsHovered(true);
-  const onMouseLeave = () => setIsHovered(false);
+	const [isHovering, setIsHovered] = useState(false);
 
-  return (
-    <li className="py-5 border-b-[1px] border-white w-full flex justify-between flex-col text-[26px] transition-all ease-out duration-100">
-      <div
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        className="flex justify-between items-center w-full font-light xl:text-[32px] text-[22px]"
-      >
-        <span>{title}</span>
-        <span className="flex cursor-pointer text-[16px] gap-1 font-light">
-          <a className="" href={"#contact-us"}>
-            Подробнее
-          </a>
-          →
-        </span>
-      </div>
+	const onMouseEnter = () => setIsHovered(true);
+	const onMouseLeave = () => setIsHovered(false);
 
-      <p
-        className={`mt-2 text-[16px] max-w-[1000px] font-normal${
-          isHovering
-            ? "opacity-100 max-h-[500px] transition-all duration-300 ease-in"
-            : "opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-out"
-        }`}
-      >
-        {description}
-      </p>
-    </li>
-  );
+	return (
+		<li className={styles.serviceItem}>
+			<div
+				onMouseEnter={onMouseEnter}
+				onMouseLeave={onMouseLeave}
+				className={styles.titleContainer}
+			>
+				<p>{title}</p>
+				<span className=''>
+					<a href={'#contact-us'}>Подробнее</a>→
+				</span>
+			</div>
+
+			<p
+				className={cn(styles.description, {
+					[styles.active]: isHovering
+				})}
+			>
+				{description}
+			</p>
+		</li>
+	);
 };
 
 export default ServiceItem;

@@ -1,0 +1,23 @@
+.aboutSection {
+	@apply flex relative justify-start bg-[#121212] bg-[url('/bg-about.png')] py-[55px] lg:py-[210px] overflow-hidden;
+}
+
+.aboutContent {
+	@apply flex flex-col gap-12 px-6 lg:px-8 xl:px-48 z-10;
+
+	h1 {
+		@apply text-center text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
+	}
+
+	h2 {
+		@apply max-w-[1000px] text-[22px] font-light leading-8 text-[#9C9C9C] xl:text-[32px];
+	}
+
+	ul {
+		@apply flex flex-col gap-[30px] text-[22px] font-light leading-8 md:gap-[55px] xl:text-[32px];
+
+		li {
+			@apply max-w-[600px];
+		}
+	}
+}

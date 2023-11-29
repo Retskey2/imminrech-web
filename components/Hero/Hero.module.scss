@@ -1,0 +1,35 @@
+.heroSection {
+	@apply grid grid-cols-1 gap-3 px-6 py-[55px] lg:grid-cols-hero lg:px-8 lg:py-[180px] xl:px-48;
+
+	.heroContent {
+		@apply z-20 text-center lg:text-left;
+
+		.heroTitle {
+			@apply mb-[16px] mt-10 whitespace-nowrap text-[25px] font-semibold leading-tight md:text-[35px] lg:text-[50px] xl:font-extrabold 2xl:mb-10 2xl:text-[70px];
+		}
+
+		.heroDescription {
+			@apply mb-[30px] max-w-[1000px] text-[14px] font-light text-[#9C9C9C] md:text-[22px] lg:text-[28px] xl:text-[32px] 2xl:mb-[50px];
+		}
+
+		.heroLink {
+			@apply rounded border-[0.5px] border-solid border-white px-12 py-[11px] text-xl hover:border-[#CEFF45] hover:bg-[#CEFF45] hover:text-black md:text-[14px] lg:text-[20px];
+		}
+	}
+
+	.heroImage {
+		@apply relative hidden h-full justify-self-center lg:flex lg:w-[355px] xl:w-[400px] 2xl:w-[480px];
+
+		.heroImageBack {
+			@apply absolute top-6 w-full;
+		}
+
+		.heroImageFront {
+			@apply absolute -top-12 w-full transition-transform duration-300 ease-out;
+		}
+
+		.heroImageEffectsBlock {
+			@apply w-full;
+		}
+	}
+}

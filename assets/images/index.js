@@ -10,9 +10,12 @@ import toBodyIcon from "./to-body.svg";
 import syleymanovaIcon from "./Syleymanova.svg";
 import zokIcon from "./zok.svg";
 
+import backroundImageAbout from "./bg-about.svg"
+
 export {
   headerLogo,
   telegram,
+  backroundImageAbout,
   whatsapp,
   toBodyIcon,
   syleymanovaIcon,

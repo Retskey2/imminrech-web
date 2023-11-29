@@ -1,36 +1,41 @@
-import useMousePosition from "@/hooks/useMousePosition";
-import React, { useState } from "react";
+import React from 'react';
 
+import styles from './About.module.scss';
+
+import { backroundImageAbout } from '@/assets/images';
+import Image from 'next/image';
 const About = () => {
-  return (
-    <section
-      className="flex justify-start bg-[#121212] lg:py-[210px] py-[55px]"
-      id="about-us"
-    >
-      <main className="flex flex-col gap-12 xl:px-48 lg:px-8 px-6">
-        <h1 className="md:text-[35px] lg:text-[50px] xl:text-[70px] text-[25px] font-bold text-center 2xl:text-start">
-          О НАС
-        </h1>
-        <h2 className="text-[#9C9C9C] xl:text-[32px] text-[22px] font-light max-w-[1000px] leading-8">
-          ИММИНТЭК - современная IT-компания, которая занимается разработкой
-          программного обеспечения и созданием сайтов.
-        </h2>
-        <ul className="flex flex-col md:gap-[55px] gap-[30px] xl:text-[32px] text-[22px] font-light leading-8">
-          <li className="max-w-[600px]">
-            Уделяем много времени исследованию и проектированию.
-          </li>
-          <li className="max-w-[600px]">
-            Не приступаем к разработке, пока не убедимся, что архитектура
-            проекта обеспечит все запросы наших клиентов.
-          </li>
-          <li className="max-w-[800px]">
-            Cистема управления проектами максимально прозрачная и позволит вам
-            отслеживать прогресс проекта на каждом этапе.
-          </li>
-        </ul>
-      </main>
-    </section>
-  );
+	return (
+		<section className={styles.aboutSection} id='about-us'>
+			<Image
+				className='z-0 mt-20'
+				alt='back-about'
+				src={backroundImageAbout}
+				layout='fill'
+				objectFit='cover'
+				quality={100}
+			/>
+
+			<main className={styles.aboutContent}>
+				<h1>О НАС</h1>
+				<h2>
+					ИММИНТЭК - современная IT-компания, которая занимается разработкой программного
+					обеспечения и созданием сайтов.
+				</h2>
+				<ul>
+					<li>Уделяем много времени исследованию и проектированию.</li>
+					<li>
+						Не приступаем к разработке, пока не убедимся, что архитектура проекта обеспечит все
+						запросы наших клиентов.
+					</li>
+					<li>
+						Cистема управления проектами максимально прозрачная и позволит вам отслеживать прогресс
+						проекта на каждом этапе.
+					</li>
+				</ul>
+			</main>
+		</section>
+	);
 };
 
 export default About;

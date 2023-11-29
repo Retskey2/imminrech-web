@@ -1,0 +1,15 @@
+.casesItem {
+	@apply flex w-full max-w-[360px] flex-col rounded-3xl border-[1px] px-5 py-10 2xl:max-w-none;
+
+	.itemImageContainer {
+		@apply flex h-[262px] w-full items-center justify-center rounded-xl bg-white p-8;
+	}
+
+	.itemTitle {
+		@apply mb-4 mt-8 text-[14px] font-bold uppercase tracking-[1.3px] text-[#CEFF45];
+	}
+
+	.itemDescription {
+		@apply text-[18px] font-semibold leading-8 xl:text-[26px];
+	}
+}
