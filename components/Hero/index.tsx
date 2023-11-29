@@ -61,6 +61,7 @@ const Hero = () => {
 					className={styles.heroImageBack}
 					priority
 					width={10}
+					quality={100}
 					height={10}
 					draggable={false}
 					alt='back'

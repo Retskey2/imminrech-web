@@ -22,14 +22,10 @@ const About = () => {
 			/>
 			<main className={styles.aboutContent}>
 				<motion.div
-					initial='hidden'
-					whileInView='visible'
+					initial={{ x: -400, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.8 }}
-					variants={{
-						visible: { opacity: 1, scale: 1 },
-						hidden: { opacity: 0, scale: 0 }
-					}}
 				>
 					<h1>О НАС</h1>
 					<h2>

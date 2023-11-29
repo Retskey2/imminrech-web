@@ -12,8 +12,8 @@ const Services = () => {
 	return (
 		<section className={styles.serviceSection} id='services'>
 			<motion.main
-				initial='hidden'
-				whileInView='visible'
+				initial={{ x: -400, opacity: 0 }}
+				whileInView={{ x: 0, opacity: 1 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.8 }}
 				variants={{

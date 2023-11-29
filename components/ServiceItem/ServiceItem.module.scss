@@ -4,7 +4,7 @@
 	.titleContainer {
 		@apply flex w-full items-center justify-between text-[22px] font-light xl:text-[32px];
 
-		> span {
+		>span {
 			@apply flex cursor-pointer gap-1 text-[16px] font-light;
 		}
 	}
@@ -13,7 +13,7 @@
 		@apply mt-2 max-h-0 max-w-[1000px] overflow-hidden text-[16px] font-normal opacity-0 transition-all duration-300 ease-out;
 
 		&.active {
-			@apply max-h-[500px] opacity-100 transition-all duration-300 ease-in;
+			@apply max-h-[500px] opacity-100 transition-all duration-500 ease-in;
 		}
 	}
 }

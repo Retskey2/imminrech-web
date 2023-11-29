@@ -10,8 +10,8 @@ const Contact = () => {
 	return (
 		<section className={styles.contactSection} id='contact-us'>
 			<motion.main
-				initial='hidden'
-				whileInView='visible'
+				initial={{ x: -400, opacity: 0 }}
+				whileInView={{ x: 0, opacity: 1 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.8 }}
 				variants={{

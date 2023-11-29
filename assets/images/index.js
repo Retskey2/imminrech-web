@@ -6,9 +6,9 @@ import star from "./star.svg";
 import telegram from "./telegram.svg";
 import whatsapp from "./watsapp.svg";
 
-import toBodyIcon from "./to-body.svg";
-import syleymanovaIcon from "./Syleymanova.svg";
-import zokIcon from "./zok.svg";
+import toBodyIcon from "./logo_to-body.png";
+import syleymanovaIcon from "./Syleymanova.png";
+import zokIcon from "./zok.png";
 
 import mask from './mask.svg'
 
