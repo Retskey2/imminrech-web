@@ -3,7 +3,7 @@
 }
 
 .casesContent {
-	@apply flex w-full flex-col gap-[10px] px-6 lg:px-8 xl:px-48 max-w-[1920px] m-auto;
+	@apply flex w-full flex-col gap-12 px-6 lg:px-8 xl:px-48 max-w-[1920px] m-auto;
 
 	h1 {
 		@apply text-center text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;

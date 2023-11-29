@@ -1,10 +1,11 @@
 'use client';
+
+import Image from 'next/image';
 import React, { useState } from 'react';
 
-import styles from './About.module.scss';
-
 import { backroundImageAbout } from '@/assets/images';
-import Image from 'next/image';
+
+import styles from './About.module.scss';
 
 const About = () => {
 	return (
@@ -21,7 +22,7 @@ const About = () => {
 				<div>
 					<h1>О НАС</h1>
 					<h2>
-						ИММИНТЭК - современная IT-компания, которая занимается <br /> разработкой программного
+						ИММИНТЭК - современная IT-компания, которая занимается разработкой программного
 						обеспечения и созданием сайтов.
 					</h2>
 					<ul>
