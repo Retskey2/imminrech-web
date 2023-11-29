@@ -6,6 +6,8 @@ import React, { useState } from 'react';
 import { backroundImageAbout } from '@/assets/images';
 
 import styles from './About.module.scss';
+import { motion } from 'framer-motion';
+import { once } from 'events';
 
 const About = () => {
 	return (
@@ -19,7 +21,16 @@ const About = () => {
 				quality={100}
 			/>
 			<main className={styles.aboutContent}>
-				<div>
+				<motion.div
+					initial='hidden'
+					whileInView='visible'
+					viewport={{ once: true }}
+					transition={{ duration: 0.8 }}
+					variants={{
+						visible: { opacity: 1, scale: 1 },
+						hidden: { opacity: 0, scale: 0 }
+					}}
+				>
 					<h1>О НАС</h1>
 					<h2>
 						ИММИНТЭК - современная IT-компания, которая занимается разработкой программного
@@ -36,7 +47,7 @@ const About = () => {
 							прогресс проекта на каждом этапе.
 						</li>
 					</ul>
-				</div>
+				</motion.div>
 			</main>
 		</section>
 	);

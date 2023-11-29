@@ -4,11 +4,22 @@ import React from 'react';
 
 import styles from './Contact.module.scss';
 import { handleSubmit } from './handleSubmit';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
 	return (
 		<section className={styles.contactSection} id='contact-us'>
-			<main className={styles.contactContent}>
+			<motion.main
+				initial='hidden'
+				whileInView='visible'
+				viewport={{ once: true }}
+				transition={{ duration: 0.8 }}
+				variants={{
+					visible: { opacity: 1, scale: 1 },
+					hidden: { opacity: 0, scale: 0 }
+				}}
+				className={styles.contactContent}
+			>
 				<h1>Обсудить детали проекта</h1>
 				<form onSubmit={() => handleSubmit} className={styles.contactForm}>
 					<div className={styles.formGrid}>
@@ -69,7 +80,7 @@ const Contact = () => {
 					</div>
 					<button className={styles.submitButton}>Отправить</button>
 				</form>
-			</main>
+			</motion.main>
 		</section>
 	);
 };

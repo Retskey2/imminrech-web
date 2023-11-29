@@ -1,14 +1,27 @@
+'use client';
+
 import React from 'react';
 
 import ServiceItem from '../ServiceItem';
 
 import styles from './Services.module.scss';
 import { services } from '@/constants';
+import { motion } from 'framer-motion';
 
 const Services = () => {
 	return (
 		<section className={styles.serviceSection} id='services'>
-			<main className={styles.serviceContainer}>
+			<motion.main
+				initial='hidden'
+				whileInView='visible'
+				viewport={{ once: true }}
+				transition={{ duration: 0.8 }}
+				variants={{
+					visible: { opacity: 1, scale: 1 },
+					hidden: { opacity: 0, scale: 0 }
+				}}
+				className={styles.serviceContainer}
+			>
 				<h1>УСЛУГИ</h1>
 				<ul className={styles.serviceStageMenu}>
 					<li>
@@ -27,7 +40,7 @@ const Services = () => {
 						<ServiceItem key={service.id} title={service.title} description={service.description} />
 					))}
 				</ul>
-			</main>
+			</motion.main>
 		</section>
 	);
 };

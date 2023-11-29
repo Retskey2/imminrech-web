@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { backgroundHeroPromo, iphone, star } from '@/assets/images';
 
 import styles from './Hero.module.scss';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
 	const [position, setPosition] = useState({
@@ -29,7 +30,15 @@ const Hero = () => {
 		});
 	};
 	return (
-		<section
+		<motion.section
+			initial='hidden'
+			whileInView='visible'
+			viewport={{ once: true }}
+			transition={{ duration: 0.8 }}
+			variants={{
+				visible: { opacity: 1, scale: 1 },
+				hidden: { opacity: 0, scale: 0 }
+			}}
 			className={styles.heroSection}
 			onMouseMove={handleMouseMove}
 			role='region'
@@ -51,6 +60,8 @@ const Hero = () => {
 				<Image
 					className={styles.heroImageBack}
 					priority
+					width={10}
+					height={10}
 					draggable={false}
 					alt='back'
 					src={backgroundHeroPromo}
@@ -63,7 +74,10 @@ const Hero = () => {
 					priority
 					draggable={false}
 					alt='iphone'
-					src={iphone}
+					quality={100}
+					width={500}
+					height={500}
+					src={iphone.src}
 				/>
 				<div
 					className={styles.heroImageEffectsBlock}
@@ -73,7 +87,7 @@ const Hero = () => {
 					aria-hidden='true'
 				></div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

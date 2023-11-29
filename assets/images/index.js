@@ -1,6 +1,6 @@
 import headerLogo from "./header-logo.svg";
 import backgroundHeroPromo from "./background-promo.svg";
-import iphone from "./iphone.svg";
+import iphone from "./iphone.png";
 import star from "./star.svg";
 
 import telegram from "./telegram.svg";
