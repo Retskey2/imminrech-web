@@ -86,7 +86,60 @@ const Hero = () => {
 						transform: `translate(${position.star.x}px, ${position.star.y}px)`
 					}}
 					aria-hidden='true'
-				></div>
+				>
+					<Image
+						style={{
+							transform: `translate(${position.star.x}px, ${position.star.y}px)`
+						}}
+						className='absolute left-24 top-32'
+						priority
+						draggable={false}
+						alt='iphone'
+						quality={100}
+						width={33}
+						height={33}
+						src={star.src}
+					/>
+					<Image
+						style={{
+							transform: `translate(${position.star.x}px, ${position.star.y}px)`
+						}}
+						className='absolute -right-6 top-10'
+						priority
+						draggable={false}
+						alt='iphone'
+						quality={100}
+						width={86}
+						height={86}
+						src={star.src}
+					/>
+					<Image
+						style={{
+							transform: `translate(${position.star.x}px, ${position.star.y}px)`
+						}}
+						className='absolute right-6 top-[106px]'
+						priority
+						draggable={false}
+						alt='iphone'
+						quality={100}
+						width={66}
+						height={66}
+						src={star.src}
+					/>
+					<Image
+						style={{
+							transform: `translate(${position.star.x}px, ${position.star.y}px)`
+						}}
+						className='absolute -left-10 top-[320px]'
+						priority
+						draggable={false}
+						alt='iphone'
+						quality={100}
+						width={84}
+						height={84}
+						src={star.src}
+					/>
+				</div>
 			</div>
 		</motion.section>
 	);

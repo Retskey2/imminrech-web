@@ -25,11 +25,11 @@
 		}
 
 		.heroImageFront {
-			@apply absolute -top-12 w-full transition-transform duration-300 ease-out;
+			@apply absolute -top-12 z-50 w-full transition-transform duration-300 ease-out;
 		}
 
 		.heroImageEffectsBlock {
-			@apply w-full;
+			@apply w-full absolute;
 		}
 	}
 }
