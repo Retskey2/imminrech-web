@@ -20,16 +20,17 @@ const About = () => {
 				objectPosition='0px 15px'
 				quality={100}
 			/>
-			<main className={styles.aboutContent}>
+			<main>
 				<motion.div
-				// initial={{ x: -400, opacity: 0 }}
-				// whileInView={{ x: 0, opacity: 1 }}
-				// viewport={{ once: true }}
-				// transition={{ duration: 0.8 }}
-				// variants={{
-				// 	visible: { opacity: 1, scale: 1 },
-				// 	hidden: { opacity: 0, scale: 0 }
-				// }}
+					initial={{ x: -400, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.8 }}
+					variants={{
+						visible: { opacity: 1, scale: 1 },
+						hidden: { opacity: 0, scale: 0 }
+					}}
+					className={styles.aboutContent}
 				>
 					<h1>О НАС</h1>
 					<h2>
