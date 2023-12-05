@@ -66,13 +66,34 @@ const Hero = () => {
 			<section className={styles.heroContent}>
 				<div className={styles.mobileHeroImage} role='img' aria-label='Decorative Back-Image'>
 					<div className={styles.radialBackground}></div>
-					{/* <Image
-						src='/main background img.jpg'
-						alt=''
-						layout='fill'
-						objectFit='cover'
-						className='bgImage'
-					/> */}
+					<div className='relative h-full w-full'>
+						<Image
+							style={{
+								transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
+							}}
+							className='absolute -top-[240px] -left-8'
+							priority
+							draggable={false}
+							alt='iphone'
+							width={33}
+							quality={100}
+							height={33}
+							src={star.src}
+						/>
+						<Image
+							style={{
+								transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
+							}}
+							className='absolute -top-[70px] -right-[90px]'
+							priority
+							draggable={false}
+							alt='iphone'
+							width={63}
+							quality={100}
+							height={63}
+							src={star.src}
+						/>
+					</div>
 				</div>
 				<h1 className={styles.heroTitle}>
 					СОЗДАЕМ УДОБНЫЕ <br /> ЦИФРОВЫЕ ПРОДУКТЫ
@@ -116,7 +137,7 @@ const Hero = () => {
 							style={{
 								transform: `translate(${position.stars.star1.x}px, ${position.stars.star1.y}px)`
 							}}
-							className='absolute left-24 top-32'
+							className='absolute lg:left-20 lg:top-28 xl:left-20 xl:top-32 2xl:left-28 2xl:top-32 sm:top-20 sm:left-[50px] xl:w-[33px] lg:w-[32px] sm:w-[22px]'
 							priority
 							draggable={false}
 							alt='iphone'
@@ -131,12 +152,12 @@ const Hero = () => {
 						style={{
 							transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
 						}}
-						className='absolute -right-6 top-10'
+						className='absolute md:-right-2 lg:-right-4 top-10 lg:w-[78px] md:w-[58px]'
 						priority
 						draggable={false}
 						alt='iphone'
+						width={0}
 						quality={100}
-						width={86}
 						height={86}
 						src={star.src}
 					/>
@@ -144,12 +165,12 @@ const Hero = () => {
 						style={{
 							transform: `translate(${position.stars.star3.x}px, ${position.stars.star3.y}px)`
 						}}
-						className='absolute right-6 top-[106px]'
+						className='absolute right-2 top-[90px] xl:right-2 xl:top-[100px] 2xl:right-4 2xl:top-[106px] lg:w-[66px] md:w-[46px]'
 						priority
 						draggable={false}
 						alt='iphone'
 						quality={100}
-						width={66}
+						width={0}
 						height={66}
 						src={star.src}
 					/>
@@ -157,12 +178,12 @@ const Hero = () => {
 						style={{
 							transform: `translate(${position.stars.star4.x}px, ${position.stars.star4.y}px)`
 						}}
-						className='absolute -left-10 top-[320px]'
+						className='absolute -left-10 lg:top-[260px] 2xl:top-[340px] xl:[260px] lg:w-[84px] md:top-[200px] md:w-[64px]'
 						priority
 						draggable={false}
 						alt='iphone'
 						quality={100}
-						width={84}
+						width={0}
 						height={84}
 						src={star.src}
 					/>

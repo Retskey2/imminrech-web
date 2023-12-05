@@ -1,5 +1,5 @@
 .heroSection {
-	@apply grid max-w-[1920px] m-auto grid-cols-1 gap-3 px-6 py-[55px] md:grid-cols-hero lg:px-8 lg:py-[180px] xl:px-48 relative;
+	@apply grid max-w-[1920px] m-auto grid-cols-1 gap-3 px-6 py-[50px] md:grid-cols-hero lg:px-8 lg:py-[180px] xl:px-48 relative;
 
 	.heroContent {
 		@apply z-20 text-left lg:text-left;
@@ -13,7 +13,7 @@
 		}
 
 		.heroLink {
-			@apply font-light rounded border-[0.5px] border-solid border-white px-12 py-[8px] ssm:py-[13px] text-[20px] hover:border-[#CEFF45] hover:bg-[#CEFF45] hover:text-black md:text-[14px] lg:text-[20px];
+			@apply font-light rounded border-[0.5px] border-solid border-white px-12 py-[8px] md:py-[13px] text-[20px] hover:border-[#CEFF45] hover:bg-[#CEFF45] hover:text-black md:text-[14px] lg:text-[20px];
 
 			@media (hover: none) {
 				a:hover {
