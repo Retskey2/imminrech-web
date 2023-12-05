@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-import { backgroundHeroPromo, iphone, star } from '@/assets/images';
+import { backgroundHeroPromo, iphone, star, starStroke } from '@/assets/images';
 
 import styles from './Hero.module.scss';
 
@@ -71,7 +71,7 @@ const Hero = () => {
 							style={{
 								transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
 							}}
-							className='absolute -top-[250px] -left-8'
+							className='absolute -top-[260px] -left-8'
 							priority
 							draggable={false}
 							alt='iphone'
@@ -144,7 +144,7 @@ const Hero = () => {
 							quality={100}
 							width={33}
 							height={33}
-							src={star.src}
+							src={starStroke.src}
 						/>
 					</motion.div>
 
@@ -159,7 +159,7 @@ const Hero = () => {
 						width={0}
 						quality={100}
 						height={86}
-						src={star.src}
+						src={starStroke.src}
 					/>
 					<Image
 						style={{
@@ -172,7 +172,7 @@ const Hero = () => {
 						quality={100}
 						width={0}
 						height={66}
-						src={star.src}
+						src={starStroke.src}
 					/>
 					<Image
 						style={{
@@ -185,7 +185,7 @@ const Hero = () => {
 						quality={100}
 						width={0}
 						height={84}
-						src={star.src}
+						src={starStroke.src}
 					/>
 				</div>
 			</div>
