@@ -64,7 +64,7 @@ const Navbar = () => {
 				</div>
 
 				{showNav && size.width < 1024 && (
-					<div className='fixed w-full h-full top-0 left-0 bg-[#121212] z-[100]'>
+					<div className='fixed w-full h-full top-0 left-0 bg-[#121212] z-[100] grid grid-rows-navbarMini'>
 						<div className='w-full px-8 py-8'>
 							<nav className={styles.nav}>
 								<Link href='/'>
@@ -86,7 +86,7 @@ const Navbar = () => {
 							</nav>
 						</div>
 
-						<div className='justify-center m-auto items-center text-center p-10'>
+						<div className='justify-center m-auto items-center text-center uppercase'>
 							<ul role='menu' className='gap-6 flex flex-col'>
 								{navLinks.map((link) => (
 									<li key={link.label} role='menuitem' onClick={() => setShowNav(false)}>
@@ -96,6 +96,16 @@ const Navbar = () => {
 									</li>
 								))}
 							</ul>
+						</div>
+						<div>
+							<div className='m-auto justify-center w-fit flex flex-row gap-8'>
+								<Image src={telegram} width={24} alt='icon-telegram' />
+								<Image src={whatsapp} width={24} alt='icon-whatsapp' />
+							</div>
+
+							<span className='m-auto mt-4 uppercase justify-center w-fit flex flex-row gap-8'>
+								Immintech © 2023
+							</span>
 						</div>
 					</div>
 				)}

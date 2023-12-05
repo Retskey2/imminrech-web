@@ -13,6 +13,9 @@ const config: Config = {
 				'2xnavbar': '150px minmax(200px, 1fr)',
 				hero: '1fr minmax(380px, 540px)'
 			},
+			gridTemplateRows: {
+				navbarMini: '100px minmax(200px, 1fr) 100px',
+			},
 			screens: {
 				ssm: '480px',
 				'1600xl': { max: '1600px' }
