@@ -6,7 +6,7 @@
 	@apply flex w-full flex-col px-6 lg:px-8 xl:px-48 max-w-[1920px] m-auto;
 
 	h1 {
-		@apply text-center uppercase text-[25px] font-bold text-[#CEFF45] md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
+		@apply text-left uppercase text-[25px] font-bold text-[#CEFF45] md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
 	}
 
 	.contactForm {

@@ -4,19 +4,19 @@
 	.serviceContainer {
 		@apply flex w-full flex-col gap-12 px-6 lg:px-8 xl:px-48;
 
-		> h1 {
-			@apply text-center text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
+		>h1 {
+			@apply text-left text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
 		}
 
-		> .serviceStageMenu {
+		>.serviceStageMenu {
 			@apply grid lg:grid-cols-3 lg:grid-rows-1 grid-rows-3 flex-wrap justify-center gap-6 lg:flex-nowrap 2xl:justify-between;
 
-			> li {
+			>li {
 				@apply border-b-[1px] border-white pb-4 lg:pb-10 text-[22px] font-light lg:text-[26px] xl:text-[32px];
 			}
 		}
 
-		> .serviceItemMenu {
+		>.serviceItemMenu {
 			@apply mt-10 flex flex-col gap-[10px];
 		}
 	}

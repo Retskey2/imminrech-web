@@ -5,11 +5,11 @@
 .aboutContent {
 	@apply px-6 lg:px-8 xl:px-48 z-10 m-auto max-w-[1920px] w-full;
 
-	> div {
+	>div {
 		@apply w-full flex flex-col gap-12;
 
 		h1 {
-			@apply text-center text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
+			@apply text-left text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
 		}
 
 		h2 {

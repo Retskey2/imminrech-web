@@ -14,6 +14,7 @@ const config: Config = {
 				hero: '1fr minmax(380px, 540px)'
 			},
 			screens: {
+				ssm: '480px',
 				'1600xl': { max: '1600px' }
 			}
 		}

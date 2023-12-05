@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -7,7 +8,6 @@ import React, { useState } from 'react';
 import { backgroundHeroPromo, iphone, star } from '@/assets/images';
 
 import styles from './Hero.module.scss';
-import { motion } from 'framer-motion';
 
 const Hero = () => {
 	const [position, setPosition] = useState({
@@ -64,6 +64,16 @@ const Hero = () => {
 			aria-label='Hero Section'
 		>
 			<section className={styles.heroContent}>
+				<div className={styles.mobileHeroImage} role='img' aria-label='Decorative Back-Image'>
+					<div className={styles.radialBackground}></div>
+					{/* <Image
+						src='/main background img.jpg'
+						alt=''
+						layout='fill'
+						objectFit='cover'
+						className='bgImage'
+					/> */}
+				</div>
 				<h1 className={styles.heroTitle}>
 					СОЗДАЕМ УДОБНЫЕ <br /> ЦИФРОВЫЕ ПРОДУКТЫ
 				</h1>
