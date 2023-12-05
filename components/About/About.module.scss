@@ -3,7 +3,7 @@
 }
 
 .aboutContent {
-	@apply px-6 lg:px-8 xl:px-48 z-10 m-auto max-w-[1920px] w-full;
+	@apply px-6 lg:px-8 xl:px-48 z-50 m-auto max-w-[1920px] w-full;
 
 	>div {
 		@apply w-full flex flex-col gap-12;

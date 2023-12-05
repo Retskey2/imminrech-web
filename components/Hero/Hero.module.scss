@@ -14,6 +14,12 @@
 
 		.heroLink {
 			@apply font-light rounded border-[0.5px] border-solid border-white px-12 py-[8px] ssm:py-[13px] text-[20px] hover:border-[#CEFF45] hover:bg-[#CEFF45] hover:text-black md:text-[14px] lg:text-[20px];
+
+			@media (hover: none) {
+				a:hover {
+					color: inherit;
+				}
+			}
 		}
 
 		.mobileHeroImage {
