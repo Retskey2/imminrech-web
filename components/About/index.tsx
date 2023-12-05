@@ -1,13 +1,13 @@
 'use client';
 
+import { once } from 'events';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
 import { backroundImageAbout } from '@/assets/images';
 
 import styles from './About.module.scss';
-import { motion } from 'framer-motion';
-import { once } from 'events';
 
 const About = () => {
 	return (
@@ -26,6 +26,10 @@ const About = () => {
 					whileInView={{ x: 0, opacity: 1 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.8 }}
+					variants={{
+						visible: { opacity: 1, scale: 1 },
+						hidden: { opacity: 0, scale: 0 }
+					}}
 				>
 					<h1>О НАС</h1>
 					<h2>

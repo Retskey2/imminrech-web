@@ -1,15 +1,15 @@
 .heroSection {
-	@apply grid max-w-[1920px] m-auto grid-cols-1 gap-3 px-6 py-[55px] lg:grid-cols-hero lg:px-8 lg:py-[180px] xl:px-48 relative;
+	@apply grid max-w-[1920px] m-auto grid-cols-1 gap-3 px-6 py-[55px] md:grid-cols-hero lg:px-8 lg:py-[180px] xl:px-48 relative;
 
 	.heroContent {
 		@apply z-20 text-left lg:text-left;
 
 		.heroTitle {
-			@apply mb-[16px] mt-10 whitespace-nowrap text-[34px] font-semibold leading-tight md:text-[35px] lg:text-[50px] xl:font-extrabold 2xl:mb-10 2xl:text-[70px];
+			@apply mb-[16px] mt-10 whitespace-nowrap text-[30px] font-semibold leading-tight md:text-[35px] lg:text-[50px] xl:font-extrabold 2xl:mb-10 2xl:text-[70px];
 		}
 
 		.heroDescription {
-			@apply mb-[30px] max-w-[1000px] text-[20px] font-light text-[#9C9C9C] md:text-[22px] lg:text-[28px] xl:text-[32px] 2xl:mb-[50px];
+			@apply mb-[30px] max-w-[500px] lg:max-w-[1000px] text-[20px] font-light text-[#9C9C9C] md:text-[22px] lg:text-[28px] xl:text-[32px] 2xl:mb-[50px];
 		}
 
 		.heroLink {
@@ -17,7 +17,7 @@
 		}
 
 		.mobileHeroImage {
-			@apply absolute -z-10 bottom-16 left-40 h-[269px] w-[269px] visible lg:invisible;
+			@apply absolute -z-10 bottom-16 left-[50px] h-[269px] w-[269px] visible md:invisible;
 
 			.radialBackground {
 				border-radius: 269px;
@@ -33,14 +33,14 @@
 
 
 	.heroImage {
-		@apply relative hidden h-full justify-self-center lg:flex lg:w-[355px] xl:w-[400px] 2xl:w-[480px];
+		@apply relative h-full hidden justify-self-center md:flex md:w-[260px] lg:w-[355px] xl:w-[400px] 2xl:w-[480px];
 
 		.heroImageBack {
 			@apply absolute top-6 w-full;
 		}
 
 		.heroImageFront {
-			@apply absolute -top-12 z-50 w-full transition-transform duration-300 ease-out;
+			@apply absolute z-50 w-full transition-transform duration-300 ease-out;
 		}
 
 		.heroImageEffectsBlock {
