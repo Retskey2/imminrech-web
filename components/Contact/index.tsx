@@ -1,19 +1,19 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import React from 'react';
 
 import styles from './Contact.module.scss';
 import { handleSubmit } from './handleSubmit';
-import { motion } from 'framer-motion';
 
 const Contact = () => {
 	return (
 		<section className={styles.contactSection} id='contact-us'>
 			<motion.main
-				initial={{ x: -400, opacity: 0 }}
+				initial={{ x: -50, opacity: 0 }}
 				whileInView={{ x: 0, opacity: 1 }}
 				viewport={{ once: true }}
-				transition={{ duration: 0.8 }}
+				transition={{ duration: 0.5 }}
 				variants={{
 					visible: { opacity: 1, scale: 1 },
 					hidden: { opacity: 0, scale: 0 }
