@@ -1,11 +1,10 @@
 'use client';
 
-import { once } from 'events';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 
-import { backroundImageAbout } from '@/assets/images';
+import { backroundImageAbout } from '@/assets/icons';
 
 import styles from './About.module.scss';
 
@@ -15,7 +14,6 @@ const About = () => {
 			<Image
 				alt='back-about'
 				src={backroundImageAbout}
-				layout='fill'
 				objectFit='cover'
 				objectPosition='0px 15px'
 				quality={100}

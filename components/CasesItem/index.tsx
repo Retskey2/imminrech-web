@@ -1,9 +1,11 @@
 'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import imageLogo from '../../assets/images/logo_to-body.png';
+
 import styles from './CaseItem.module.scss';
-import { motion } from 'framer-motion';
+
 interface CasesItemProps {
 	title: string;
 	description: string;

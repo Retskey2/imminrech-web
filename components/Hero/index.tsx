@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-import { backgroundHeroPromo, iphone, star, starStroke } from '@/assets/images';
+import { backgroundHeroPromo, star, starStroke } from '@/assets/icons';
+import { iphone } from '@/assets/images';
 
 import styles from './Hero.module.scss';
 
