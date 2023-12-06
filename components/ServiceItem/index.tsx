@@ -1,6 +1,7 @@
 'use client';
 
 import cn from 'classnames';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 import styles from './ServiceItem.module.scss';
@@ -21,7 +22,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
 			<div className={styles.titleContainer}>
 				<p>{title}</p>
 				<span className=''>
-					<a href={'#contact-us'}>Подробнее</a>→
+					<Link href={'#contact-us'}>Подробнее</Link>→
 				</span>
 			</div>
 

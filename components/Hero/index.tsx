@@ -73,7 +73,6 @@ const Hero = () => {
 								transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
 							}}
 							className='absolute -top-[260px] -left-8'
-							priority
 							draggable={false}
 							alt='iphone'
 							width={33}
@@ -86,7 +85,6 @@ const Hero = () => {
 								transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
 							}}
 							className='absolute -top-[70px] -right-[80px]'
-							priority
 							draggable={false}
 							alt='iphone'
 							width={63}
@@ -110,7 +108,6 @@ const Hero = () => {
 			<div className={styles.heroImage} role='img' aria-label='Decorative Image'>
 				<Image
 					className={styles.heroImageBack}
-					priority
 					width={10}
 					quality={100}
 					height={10}
@@ -124,7 +121,6 @@ const Hero = () => {
 					style={{
 						transform: `translate(${position.iphone.x}px, ${position.iphone.y}px)`
 					}}
-					priority
 					draggable={false}
 					alt='iphone'
 					quality={100}
@@ -139,7 +135,6 @@ const Hero = () => {
 								transform: `translate(${position.stars.star1.x}px, ${position.stars.star1.y}px)`
 							}}
 							className='absolute lg:left-20 lg:top-28 xl:left-20 xl:top-32 2xl:left-28 2xl:top-32 sm:top-20 sm:left-[50px] xl:w-[33px] lg:w-[32px] sm:w-[22px]'
-							priority
 							draggable={false}
 							alt='iphone'
 							quality={100}
@@ -154,7 +149,6 @@ const Hero = () => {
 							transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
 						}}
 						className='absolute md:-right-2 lg:-right-4 top-10 lg:w-[78px] md:w-[58px]'
-						priority
 						draggable={false}
 						alt='iphone'
 						width={0}
@@ -167,7 +161,6 @@ const Hero = () => {
 							transform: `translate(${position.stars.star3.x}px, ${position.stars.star3.y}px)`
 						}}
 						className='absolute right-2 top-[90px] xl:right-2 xl:top-[100px] 2xl:right-4 2xl:top-[106px] lg:w-[66px] md:w-[46px]'
-						priority
 						draggable={false}
 						alt='iphone'
 						quality={100}
@@ -180,7 +173,6 @@ const Hero = () => {
 							transform: `translate(${position.stars.star4.x}px, ${position.stars.star4.y}px)`
 						}}
 						className='absolute -left-10 lg:top-[260px] 2xl:top-[340px] xl:[260px] lg:w-[84px] md:top-[200px] md:w-[64px]'
-						priority
 						draggable={false}
 						alt='iphone'
 						quality={100}

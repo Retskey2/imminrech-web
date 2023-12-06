@@ -6,7 +6,7 @@ import { useEffect, useLayoutEffect, useState } from 'react';
 
 import { WindowSize, useWindowSize } from '@/hooks/useWindowSize';
 
-import { hamburger } from '@/assets/icons';
+import { backroundImageAbout, hamburger } from '@/assets/icons';
 import { telegram, whatsapp } from '@/assets/icons';
 
 import styles from './Navbar.module.scss';
@@ -66,20 +66,20 @@ const Navbar = () => {
 				<ul className={styles.navList} role='menu'>
 					{navLinks.map((link) => (
 						<li key={link.label} role='menuitem'>
-							<a href={link.href} className={styles.navLink}>
+							<Link href={link.href} className={styles.navLink}>
 								{link.label}
-							</a>
+							</Link>
 						</li>
 					))}
 				</ul>
 
 				<div className={styles.actions}>
 					<button className={styles.actionButton} onClick={openWhatsAppChat}>
-						<Image draggable={false} priority alt='telegram' src={whatsapp} />
+						<Image draggable={false} alt='telegram' src={whatsapp} />
 						WhatsApp
 					</button>
 					<button className={styles.actionButton} onClick={openTelegramChat}>
-						<Image draggable={false} priority alt='whatsapp' src={telegram} />
+						<Image draggable={false} alt='whatsapp' src={telegram} />
 						Telegram
 					</button>
 				</div>
@@ -97,7 +97,16 @@ const Navbar = () => {
 
 				{showNav && size.width < 1024 && (
 					<div className='fixed w-full min-h-screen h-full top-0 left-0 bg-[#121212] z-[100] grid grid-rows-navbarMini'>
-						<div className='w-full px-8 py-8'>
+						<Image
+							className='-z-10'
+							alt='back-about'
+							src={backroundImageAbout}
+							fill
+							objectFit='cover'
+							objectPosition='-150px 50px'
+							quality={100}
+						/>
+						<div className='w-full px-8 py-8 z-10'>
 							<nav className={styles.nav}>
 								<Link href='/'>
 									<h1 className={styles.logo}>ImminTech</h1>
@@ -122,9 +131,9 @@ const Navbar = () => {
 							<ul role='menu' className='gap-6 flex flex-col'>
 								{navLinks.map((link) => (
 									<li key={link.label} role='menuitem' onClick={() => setShowNav(false)}>
-										<a href={link.href} className={styles.navLinkMini}>
+										<Link href={link.href} className={styles.navLinkMini}>
 											{link.label}
-										</a>
+										</Link>
 									</li>
 								))}
 							</ul>

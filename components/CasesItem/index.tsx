@@ -20,7 +20,7 @@ const CasesItem: React.FC<CasesItemProps> = ({ title, description, image }) => {
 			className={styles.casesItem}
 		>
 			<div className={styles.itemImageContainer}>
-				<Image priority src={image.src} width={400} height={400} alt='item' />
+				<Image src={image.src} width={400} height={400} alt='item' />
 			</div>
 			<div className={styles.itemTitle}>{title}</div>
 			<p className={styles.itemDescription}>{description}</p>
