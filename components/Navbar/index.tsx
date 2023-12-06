@@ -96,7 +96,7 @@ const Navbar = () => {
 				</div>
 
 				{showNav && size.width < 1024 && (
-					<div className='fixed w-full min-h-screenk h-full top-0 left-0 bg-[#121212] z-[100] grid grid-rows-navbarMini'>
+					<div className='fixed w-full min-h-screen h-full top-0 left-0 bg-[#121212] z-[100] grid grid-rows-navbarMini'>
 						<div className='w-full px-8 py-8'>
 							<nav className={styles.nav}>
 								<Link href='/'>
