@@ -1,5 +1,6 @@
 'use client';
 
+import { InputMask } from '@react-input/mask';
 import { motion } from 'framer-motion';
 import React from 'react';
 
@@ -53,7 +54,9 @@ const Contact = () => {
 							<label htmlFor='form-phone' className='font-medium'>
 								Номер телефона
 							</label>
-							<input
+							<InputMask
+								mask='+7 (___) ___ - __ - __'
+								replacement={{ _: /\d/ }}
 								id='form-phone'
 								required
 								autoComplete='phone'
