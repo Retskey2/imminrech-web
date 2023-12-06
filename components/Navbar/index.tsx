@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 import { WindowSize, useWindowSize } from '@/hooks/useWindowSize';
 
@@ -23,6 +23,26 @@ const Navbar = () => {
 	useLayoutEffect(() => {
 		if (size.width > 1024) setShowNav(false);
 	}, [size]);
+
+	useEffect(() => {
+		if (showNav) {
+			disableScroll();
+		} else {
+			enableScroll();
+		}
+	}, [showNav]);
+
+	function disableScroll() {
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+		window.onscroll = function () {
+			window.scrollTo(scrollLeft, scrollTop);
+		};
+	}
+	function enableScroll() {
+		window.onscroll = function () {};
+	}
 
 	return (
 		<header className={styles.header}>
