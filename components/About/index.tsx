@@ -14,6 +14,7 @@ const About = () => {
 			<Image
 				alt='back-about'
 				src={backroundImageAbout}
+				layout='fill'
 				objectFit='cover'
 				objectPosition='0px 15px'
 				quality={100}

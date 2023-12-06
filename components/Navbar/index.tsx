@@ -13,6 +13,18 @@ import styles from './Navbar.module.scss';
 import { navLinks } from '@/constants';
 
 const Navbar = () => {
+	const telegramUsername = 'rkashargin';
+	const phoneNumber = '+79819716058';
+
+	const openTelegramChat = () => {
+		window.open(`https://t.me/${telegramUsername}`, '_blank');
+	};
+
+	const openWhatsAppChat = () => {
+		const formattedNumber = phoneNumber.replace(/\D/g, ''); // Убираем все символы, кроме цифр
+		window.open(`https://wa.me/${formattedNumber}`, '_blank');
+	};
+
 	const [showNav, setShowNav] = useState(false);
 	const size: WindowSize = useWindowSize();
 
@@ -62,11 +74,11 @@ const Navbar = () => {
 				</ul>
 
 				<div className={styles.actions}>
-					<button className={styles.actionButton}>
+					<button className={styles.actionButton} onClick={openWhatsAppChat}>
 						<Image draggable={false} priority alt='telegram' src={whatsapp} />
 						WhatsApp
 					</button>
-					<button className={styles.actionButton}>
+					<button className={styles.actionButton} onClick={openTelegramChat}>
 						<Image draggable={false} priority alt='whatsapp' src={telegram} />
 						Telegram
 					</button>
@@ -119,8 +131,8 @@ const Navbar = () => {
 						</div>
 						<div>
 							<div className='m-auto justify-center w-fit flex flex-row gap-8'>
-								<Image src={telegram} width={24} alt='icon-telegram' />
-								<Image src={whatsapp} width={24} alt='icon-whatsapp' />
+								<Image src={telegram} width={24} alt='icon-telegram' onClick={openTelegramChat} />
+								<Image src={whatsapp} width={24} alt='icon-whatsapp' onClick={openWhatsAppChat} />
 							</div>
 
 							<span className='m-auto mt-4 uppercase justify-center w-fit flex flex-row gap-8'>
