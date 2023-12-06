@@ -14,7 +14,7 @@ import { navLinks } from '@/constants';
 
 const Navbar = () => {
 	const telegramUsername = 'rkashargin';
-	const phoneNumber = '+79819716058';
+	const phoneNumber = '89992232800';
 
 	const openTelegramChat = () => {
 		window.open(`https://t.me/${telegramUsername}`, '_blank');
