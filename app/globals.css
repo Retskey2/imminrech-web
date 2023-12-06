@@ -16,6 +16,8 @@
 
 body {
 	background: var(--background-rgb);
+	-webkit-tap-highlight-color: transparent;
+	
 }
 
 @layer components {

@@ -8,6 +8,9 @@ import styles from './Contact.module.scss';
 import { handleSubmit } from './handleSubmit';
 
 const Contact = () => {
+	const modify = (input: string) => {
+		return { mask: input[0] === '7' ? '+_ (___) ___-__-__' : undefined };
+	};
 	return (
 		<section className={styles.contactSection} id='contact-us'>
 			<motion.main
@@ -57,6 +60,7 @@ const Contact = () => {
 							<InputMask
 								mask='+7 (___) ___ - __ - __'
 								replacement={{ _: /\d/ }}
+								modify={modify}
 								id='form-phone'
 								required
 								autoComplete='phone'
