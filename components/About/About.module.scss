@@ -2,28 +2,27 @@
 	@apply flex relative justify-start bg-[#121212] py-[55px] lg:py-[210px] overflow-hidden;
 
 	>main {
+		@apply px-6 lg:px-8 xl:px-48 max-w-[1920px] w-full m-auto;
 		z-index: 60 !important;
-	}
 
-	.aboutContent {
-		@apply px-6 lg:px-8 xl:px-48 m-auto max-w-[1920px] w-full;
+		.aboutContent {
+			>div {
+				@apply w-full flex flex-col gap-12;
 
-		>div {
-			@apply w-full flex flex-col gap-12;
+				h1 {
+					@apply text-left text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
+				}
 
-			h1 {
-				@apply text-left text-[25px] font-bold md:text-[35px] lg:text-[50px] xl:text-[70px] 2xl:text-start;
-			}
+				h2 {
+					@apply max-w-[1000px] text-[22px] font-light leading-8 text-[#9C9C9C] xl:text-[32px];
+				}
 
-			h2 {
-				@apply max-w-[1000px] text-[22px] font-light leading-8 text-[#9C9C9C] xl:text-[32px];
-			}
+				ul {
+					@apply flex flex-col gap-[30px] text-[22px] font-light leading-8 md:gap-[55px] xl:text-[32px];
 
-			ul {
-				@apply flex flex-col gap-[30px] text-[22px] font-light leading-8 md:gap-[55px] xl:text-[32px];
-
-				li {
-					@apply max-w-[600px];
+					li {
+						@apply max-w-[600px];
+					}
 				}
 			}
 		}

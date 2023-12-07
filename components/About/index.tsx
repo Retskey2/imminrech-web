@@ -18,9 +18,7 @@ const About = () => {
 				priority
 				objectPosition='0px 15px'
 				quality={100}
-				style={{
-					objectFit: 'cover'
-				}}
+				objectFit='cover'
 			/>
 			<main>
 				<motion.div
