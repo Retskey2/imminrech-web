@@ -16,9 +16,11 @@ const About = () => {
 				src={backroundImageAbout}
 				fill
 				priority
-				objectFit='cover'
 				objectPosition='0px 15px'
 				quality={100}
+				style={{
+					objectFit: 'cover'
+				}}
 			/>
 			<main>
 				<motion.div

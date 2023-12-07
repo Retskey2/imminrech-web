@@ -93,9 +93,11 @@ const Navbar = () => {
 							alt='back-about'
 							src={backroundImageAbout}
 							fill
-							objectFit='cover'
 							objectPosition='-150px 50px'
 							quality={100}
+							style={{
+								objectFit: 'cover'
+							}}
 						/>
 						<div className='w-full px-8 py-8 z-10'>
 							<nav className={styles.nav}>
