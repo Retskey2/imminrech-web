@@ -72,7 +72,7 @@ const Hero = () => {
 							style={{
 								transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
 							}}
-							className='absolute -top-[260px] -left-8'
+							className='absolute lg:-top-[260px] -top-[280px] -left-8'
 							draggable={false}
 							alt='iphone'
 							width={33}
@@ -84,7 +84,7 @@ const Hero = () => {
 							style={{
 								transform: `translate(${position.stars.star2.x}px, ${position.stars.star2.y}px)`
 							}}
-							className='absolute -top-[70px] -right-[80px]'
+							className='absolute -top-[70px] -right-[90px]'
 							draggable={false}
 							alt='iphone'
 							width={63}

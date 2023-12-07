@@ -50,7 +50,7 @@ const Contact = () => {
 								maxLength={80}
 								name='name'
 								type='text'
-								placeholder='Борисов Борис Борисыч'
+								placeholder='Фамилия Имя Отчество'
 							/>
 						</div>
 						<div className={styles.formField}>

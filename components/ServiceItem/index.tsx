@@ -12,23 +12,20 @@ interface ServiceItemProps {
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ title, description }) => {
-	const [isHovering, setIsHovered] = useState(false);
-
-	const onMouseEnter = () => setIsHovered(true);
-	const onMouseLeave = () => setIsHovered(false);
+	const [isActive, setIsActive] = useState(false);
 
 	return (
-		<li className={styles.serviceItem} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+		<li className={styles.serviceItem}>
 			<div className={styles.titleContainer}>
 				<p>{title}</p>
-				<span className=''>
-					<Link href={'#contact-us'}>Подробнее</Link>→
+				<span onClick={() => setIsActive(!isActive)}>
+					<div>Подробнее</div>→
 				</span>
 			</div>
 
 			<p
 				className={cn(styles.description, {
-					[styles.active]: isHovering
+					[styles.active]: isActive
 				})}
 			>
 				{description}

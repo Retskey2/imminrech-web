@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useLayoutEffect, useState } from 'react';
 
+import { getSocialMedia } from '@/hooks/getSocialMedia';
 import { WindowSize, useWindowSize } from '@/hooks/useWindowSize';
 
 import { backroundImageAbout, hamburger } from '@/assets/icons';
@@ -13,17 +14,7 @@ import styles from './Navbar.module.scss';
 import { navLinks } from '@/constants';
 
 const Navbar = () => {
-	const telegramUsername = 'rkashargin';
-	const phoneNumber = '89992232800';
-
-	const openTelegramChat = () => {
-		window.open(`https://t.me/${telegramUsername}`, '_blank');
-	};
-
-	const openWhatsAppChat = () => {
-		const formattedNumber = phoneNumber.replace(/\D/g, ''); // Убираем все символы, кроме цифр
-		window.open(`https://wa.me/${formattedNumber}`, '_blank');
-	};
+	const { openTelegramChat, openWhatsAppChat } = getSocialMedia();
 
 	const [showNav, setShowNav] = useState(false);
 	const size: WindowSize = useWindowSize();

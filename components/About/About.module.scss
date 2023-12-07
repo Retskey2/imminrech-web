@@ -1,5 +1,5 @@
 .aboutSection {
-	@apply flex relative justify-start bg-[#121212] bg-[url('/bg-about.png')] py-[55px] lg:py-[210px] overflow-hidden;
+	@apply flex relative justify-start bg-[#121212] py-[55px] lg:py-[210px] overflow-hidden;
 
 	>main {
 		z-index: 60 !important;

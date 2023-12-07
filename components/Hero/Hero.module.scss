@@ -1,5 +1,5 @@
 .heroSection {
-	@apply grid max-w-[1920px] m-auto grid-cols-1 gap-3 px-6 py-[50px] md:grid-cols-hero lg:px-8 lg:py-[180px] xl:px-48 relative;
+	@apply grid max-w-[1920px] m-auto grid-cols-1 gap-3 px-6 py-[50px] md:grid-cols-hero lg:px-8 lg:py-[180px] xl:px-48 relative overflow-x-clip;
 
 	.heroContent {
 		@apply z-20 text-left lg:text-left;
