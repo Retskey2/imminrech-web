@@ -19,6 +19,10 @@ const Navbar = () => {
 	const [showNav, setShowNav] = useState(false);
 	const size: WindowSize = useWindowSize();
 
+	useEffect(() => {
+		showNav ? (document.body.style.overflow = 'hidden') : (document.body.style.overflow = 'auto');
+	}, [showNav]);
+
 	const handleNav = () => {
 		setShowNav(!showNav);
 	};
