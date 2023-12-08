@@ -1,5 +1,6 @@
 export async function handleSubmit(event: any) {
 	event.preventDefault();
+
 	const formData = new FormData(event.target);
 	try {
 		const response = await fetch('/api/contact', {

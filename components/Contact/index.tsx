@@ -2,15 +2,20 @@
 
 import { InputMask } from '@react-input/mask';
 import { motion } from 'framer-motion';
-import React from 'react';
+import { useRouter } from 'next/navigation';
+import React, { useRef } from 'react';
 
 import styles from './Contact.module.scss';
-import { handleSubmit } from './handleSubmit';
+import { yourAction } from './actions';
 
 const Contact = () => {
+	const ref = useRef(null);
+	const { replace } = useRouter();
+
 	const modify = (input: string) => {
 		return { mask: input[0] === '7' ? '+_ (___) ___-__-__' : undefined };
 	};
+
 	return (
 		<section className={styles.contactSection} id='contact-us'>
 			<motion.main
@@ -25,7 +30,18 @@ const Contact = () => {
 				className={styles.contactContent}
 			>
 				<h1>Обсудить детали проекта</h1>
-				<form onSubmit={handleSubmit} className={styles.contactForm}>
+				<form
+					ref={ref}
+					id='contact-form'
+					action={async (formData) => {
+						// current formData is not effected by .reset()
+						await yourAction(formData);
+						//@ts-ignore
+						ref.current.reset();
+						replace('/');
+					}}
+					className={styles.contactForm}
+				>
 					<div className={styles.formGrid}>
 						<div className={styles.formField}>
 							<label htmlFor='form-company' className='font-medium'>
