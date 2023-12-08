@@ -97,7 +97,7 @@ const Contact = () => {
 								required
 								autoComplete='email'
 								maxLength={80}
-								placeholder='NewPochta@mail.com'
+								placeholder='example@mail.com'
 								name='email'
 								type='email'
 							/>

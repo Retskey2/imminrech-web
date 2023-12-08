@@ -18,7 +18,7 @@ const Footer = () => {
 				<div>
 					<h1 className='font-bold text-[30px]'>Напиши нам о своём проекте!</h1>
 					<ul className='mt-8 grid grid-rows-3 gap-3 text-lg font-normal'>
-						<li>NewPohta@mail.ru</li>
+						<li>1@immin.tech</li>
 						<li>+7 (999) 223-28-00</li>
 						<li className='flex gap-4'>
 							<button>
