@@ -31,25 +31,25 @@ const Navbar = () => {
 		if (size.width > 1024) setShowNav(false);
 	}, [size]);
 
-	// useEffect(() => {
-	// 	if (showNav) {
-	// 		disableScroll();
-	// 	} else {
-	// 		enableScroll();
-	// 	}
-	// }, [showNav]);
+	useEffect(() => {
+		if (showNav) {
+			disableScroll();
+		} else {
+			enableScroll();
+		}
+	}, [showNav]);
 
-	// function disableScroll() {
-	// 	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	// 	const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+	function disableScroll() {
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-	// 	window.onscroll = function () {
-	// 		window.scrollTo(scrollLeft, scrollTop);
-	// 	};
-	// }
-	// function enableScroll() {
-	// 	window.onscroll = function () {};
-	// }
+		window.onscroll = function () {
+			window.scrollTo(scrollLeft, scrollTop);
+		};
+	}
+	function enableScroll() {
+		window.onscroll = function () {};
+	}
 
 	return (
 		<header className={styles.header}>
