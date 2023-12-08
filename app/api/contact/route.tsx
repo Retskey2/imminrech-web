@@ -1,47 +1,45 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 const nodemailer = require('nodemailer');
 
-// Handles POST requests to /api
-
 export async function POST(request: any) {
-	const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
 	const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
 	const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL;
 
-	console.log(username, password, myEmail);
+	console.log(password, myEmail);
 
-	console.log('dealing with request');
 	const formData = await request.formData();
+
 	const name = formData.get('name');
 	const email = formData.get('email');
-	const message = formData.get('message');
+	const company = formData.get('company');
+	const phone = formData.get('phone');
 
-	// create transporter object
 	const transporter = nodemailer.createTransport({
-		Service: 'gmail',
-		host: 'smtp.gmail.com',
+		Service: 'mail',
+		host: 'smtp.mail.ru',
 		port: 465,
-		secure: true,
 		auth: {
-			user: username,
+			user: myEmail,
 			pass: password
 		}
 	});
 
 	try {
 		const mail = await transporter.sendMail({
-			from: username,
+			from: myEmail,
 			to: myEmail,
-			replyTo: email,
-			subject: `Website activity from ${email}`,
+			subject: `Клиент. Письмо от ${email}`,
 			html: `
-            <p>Name: ${name} </p>
-            <p>Email: ${email} </p>
-            <p>Message: ${message} </p>
-            `
+            <p>Имя представителя: ${name} </p>
+            <p>Почта: ${email} </p>
+            <p>Компания: ${company} </p>
+            <p>Номер телефон: ${phone} </p>
+            `,
+			defaults: {
+				from: `"От кого" <${myEmail}>`
+			}
 		});
-
 		return NextResponse.json({ message: 'Success: email was sent' });
 	} catch (error) {
 		console.log(error);

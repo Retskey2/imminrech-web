@@ -25,7 +25,7 @@ const Contact = () => {
 				className={styles.contactContent}
 			>
 				<h1>Обсудить детали проекта</h1>
-				<form onSubmit={() => handleSubmit} className={styles.contactForm}>
+				<form onSubmit={handleSubmit} className={styles.contactForm}>
 					<div className={styles.formGrid}>
 						<div className={styles.formField}>
 							<label htmlFor='form-company' className='font-medium'>
@@ -35,8 +35,10 @@ const Contact = () => {
 								id='form-company'
 								required
 								maxLength={50}
-								name='text'
-								placeholder='Noname company'
+								autoComplete='company'
+								name='company'
+								type='text'
+								placeholder='Компания'
 							/>
 						</div>
 						<div className={styles.formField}>
