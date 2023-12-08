@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 
@@ -22,7 +23,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang='en' className={rubik.className}>
 			<body>
 				<Navbar />
-				<main>{children}</main>
+				<main>
+					{children}
+					<SpeedInsights />
+				</main>
 				<Footer />
 			</body>
 		</html>
