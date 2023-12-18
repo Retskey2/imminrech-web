@@ -22,7 +22,7 @@ const Footer = () => {
 						<li>Телефон: +7 (993) 492-28-00</li>
 						<li className='flex gap-4'>
 							<Link href='tel:+7 (993) 492-28-00'>
-								<Image src={phone} width={24} alt='icon-phone' />
+								<Image src={phone} width={30} alt='icon-phone' />
 							</Link>
 							<button>
 								<Image
