@@ -137,6 +137,9 @@ const Navbar = () => {
 						</div>
 						<div>
 							<div className='m-auto justify-center w-fit flex flex-row gap-8'>
+								<Link href='tel:+7 (993) 492-28-00'>
+									<Image src={phone} width={24} alt='icon-phone' />
+								</Link>
 								<Image src={telegram} width={24} alt='icon-telegram' onClick={openTelegramChat} />
 							</div>
 
