@@ -10,18 +10,24 @@ export const navLinks = [
 export const services = [
 	{
 		id: 1,
-		title: 'Разработка',
+		title: 'Разработка программного обеспечения',
 		description:
-			'Наша команда профессиональных разработчиков и дизайнеров займется созданием мобильного приложения, специально адаптированного под потребности вашего бизнеса. Мы начнем с концептуализации и проектирования, затем продолжим внедрением и тестированием, гарантируя полный цикл разработки.'
+			'Наша команда профессиональных разработчиков и дизайнеров займется созданием приложения, специально адаптированного под потребности вашего бизнеса. Мы начнем с концептуализации и проектирования, затем продолжим внедрением и тестированием, гарантируя полный цикл разработки.'
 	},
 	{
 		id: 2,
-		title: 'Разработка дизайна',
+		title: 'Дизайн',
 		description:
 			'Мы создадим уникальный и привлекательный дизайн, соответствующий вашим целям и задачам, обеспечивая эффективное визуальное решение для различных аспектов вашего бизнеса.'
 	},
 	{
 		id: 3,
+		title: 'Создание сайта',
+		description:
+			'Мы готовы разработать для вас концепцию, дизайн и полностью разработать для вас веб-сайт.'
+	},
+	{
+		id: 4,
 		title: 'Продуктовая аналитика',
 		description:
 			'Наша команда специалистов в области продуктовой аналитики поможет вам улучшить ваш продукт, проведя анализ и предоставив ценные инсайты для оптимизации и совершенствования вашего бизнеса.'
@@ -32,7 +38,7 @@ export const cases = [
 	{
 		id: 1,
 		title: 'To body',
-		description: 'Мобильное приложение продажи одежды',
+		description: 'Мобильное приложение для бренда одежды из Санкт-Петербурга ToBody',
 		image: toBodyIcon
 	},
 	{
@@ -44,94 +50,7 @@ export const cases = [
 	{
 		id: 3,
 		title: 'dilawyer',
-		description: 'Лэндинг сайта для организации юристов',
+		description: 'Лэндинг для юридической компании DiLawyer',
 		image: syleymanovaIcon
 	}
 ];
-
-// export const statistics = [
-//   { value: "2k+", label: "Brands" },
-//   { value: "800+", label: "Shops" },
-//   { value: "320k+", label: "Customers" },
-// ];
-
-// export const products = [
-//   {
-//     imgURL: shoe4,
-//     name: "Nike Air Force 1",
-//     price: "$200.20",
-//     url: "https://www.nike.com/w/air-force-1-shoes-5sj3yzy7ok",
-//   },
-//   {
-//     imgURL: shoe5,
-//     name: "Nike Air Max 90",
-//     price: "$210.20",
-//     url: "https://www.nike.com/w?q=Nike%20Air%20Max%2090&vst=Nike%20Air%20Max%2090",
-//   },
-//   {
-//     imgURL: shoe6,
-//     name: "Nike Dunk Low",
-//     price: "$220.20",
-//     url: "https://www.nike.com/w?q=nike%20dunk%20low&vst=nike%20dunk%20low",
-//   },
-//   {
-//     imgURL: shoe7,
-//     name: "Nike Air Jordan 1",
-//     price: "$230.20",
-//     url: "https://www.nike.com/w?q=nike%20air%20jordan%201&vst=nike%20air%20jordan%201",
-//   },
-// ];
-
-// export const emailService = [
-//   {
-//     label: "Inquiries & Support",
-//     text: "Have questions about orders, products, or general assistance? Reach out to our dedicated team, and we'll get back to you promptly.",
-//   },
-//   {
-//     label: "Feedback & Suggestions",
-//     text: "Share your thoughts! We value your feedback. Let us know your suggestions or comments on how we can enhance your experience.",
-//   },
-//   {
-//     label: "Corporate Inquiries",
-//     text: "For media inquiries, business partnerships, or corporate information, contact our corporate office.",
-//   },
-// ];
-
-// export const services = [
-//   {
-//     imgURL: truckFast,
-//     label: "What are NIKE's shipping options?",
-//     text: "Nike Members get free standard shipping on orders of $50 or more (and discounted expedited shipping)—just sign in during checkout and you will automatically get free shipping on qualifying orders.",
-//   },
-//   {
-//     imgURL: shieldTick,
-//     label: "What is NIKE's return policy?",
-//     text: "We give you 60 days to try out your Nike purchase to make sure it works exactly right for you. Please note the 60-day return period represents a temporary extension of our return policy.",
-//   },
-//   {
-//     imgURL: support,
-//     label: " What is NIKE membership?",
-//     text: "Nike Membership gives you access to inspiration, community, and exclusive Nike products and experiences. It’s the best way to access everything Nike and it’s free, fast, and easy to join. ",
-//   },
-// ];
-
-// export const reviews = [
-//   {
-//     customerName: "Arthas Menethil",
-//     rating: 4.5,
-//     feedback:
-//       "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!",
-//   },
-//   {
-//     customerName: "Jaina Proudmore",
-//     rating: 4.8,
-//     feedback:
-//       "The product not only met but exceeded my expectations. I'll definitely be a returning customer!",
-//   },
-// ];
-
-// export const socialMedia = [
-//   { src: facebook, alt: "facebook logo", link: "https://facebook.com" },
-//   { src: twitter, alt: "twitter logo", link: "https://twitter.com/" },
-//   { src: instagram, alt: "instagram logo", link: "https://instagram.com/" },
-// ];
