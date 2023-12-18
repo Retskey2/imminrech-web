@@ -21,9 +21,9 @@ const Footer = () => {
 						<li>Почта: 1@immin.tech</li>
 						<li>Телефон: +7 (993) 492-28-00</li>
 						<li className='flex gap-4'>
-							<Link href='tel:+7 (993) 492-28-00'>
+							<a href='tel:+7 (993) 492-28-00'>
 								<Image src={phone} width={30} alt='icon-phone' />
-							</Link>
+							</a>
 							<button>
 								<Image
 									width={30}

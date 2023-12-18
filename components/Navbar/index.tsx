@@ -69,10 +69,10 @@ const Navbar = () => {
 				</ul>
 
 				<div className={styles.actions}>
-					<Link href='tel:+7 (993) 492-28-00' className={styles.actionButton}>
+					<a href='tel:+7 (993) 492-28-00' className={styles.actionButton}>
 						<Image width={24} draggable={false} alt='phone' src={phone} />
 						Позвонить
-					</Link>
+					</a>
 					<button className={styles.actionButton} onClick={openTelegramChat}>
 						<Image width={24} draggable={false} alt='telegram' src={telegram} />
 						Telegram
@@ -137,9 +137,9 @@ const Navbar = () => {
 						</div>
 						<div>
 							<div className='m-auto justify-center w-fit flex flex-row gap-8'>
-								<Link href='tel:+7 (993) 492-28-00'>
+								<a href='tel:+7 (993) 492-28-00'>
 									<Image src={phone} width={24} alt='icon-phone' />
-								</Link>
+								</a>
 								<Image src={telegram} width={24} alt='icon-telegram' onClick={openTelegramChat} />
 							</div>
 
