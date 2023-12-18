@@ -7,14 +7,14 @@ import { useEffect, useLayoutEffect, useState } from 'react';
 import { getSocialMedia } from '@/hooks/getSocialMedia';
 import { WindowSize, useWindowSize } from '@/hooks/useWindowSize';
 
-import { backroundImageAbout, hamburger } from '@/assets/icons';
-import { telegram, whatsapp } from '@/assets/icons';
+import { backroundImageAbout, hamburger, phone } from '@/assets/icons';
+import { telegram } from '@/assets/icons';
 
 import styles from './Navbar.module.scss';
 import { navLinks } from '@/constants';
 
 const Navbar = () => {
-	const { openTelegramChat, openWhatsAppChat } = getSocialMedia();
+	const { openTelegramChat } = getSocialMedia();
 
 	const [showNav, setShowNav] = useState(false);
 	const size: WindowSize = useWindowSize();
@@ -69,12 +69,12 @@ const Navbar = () => {
 				</ul>
 
 				<div className={styles.actions}>
-					<button className={styles.actionButton} onClick={openWhatsAppChat}>
-						<Image draggable={false} alt='telegram' src={whatsapp} />
-						WhatsApp
-					</button>
+					<Link href='tel:+7 (993) 492-28-00' className={styles.actionButton}>
+						<Image width={24} draggable={false} alt='phone' src={phone} />
+						Позвонить
+					</Link>
 					<button className={styles.actionButton} onClick={openTelegramChat}>
-						<Image draggable={false} alt='whatsapp' src={telegram} />
+						<Image width={24} draggable={false} alt='telegram' src={telegram} />
 						Telegram
 					</button>
 				</div>
@@ -138,7 +138,6 @@ const Navbar = () => {
 						<div>
 							<div className='m-auto justify-center w-fit flex flex-row gap-8'>
 								<Image src={telegram} width={24} alt='icon-telegram' onClick={openTelegramChat} />
-								<Image src={whatsapp} width={24} alt='icon-whatsapp' onClick={openWhatsAppChat} />
 							</div>
 
 							<span className='m-auto mt-4 uppercase justify-center w-fit flex flex-row gap-8'>

@@ -6,12 +6,12 @@ import React from 'react';
 
 import { getSocialMedia } from '@/hooks/getSocialMedia';
 
-import { telegram, whatsapp } from '@/assets/icons';
+import { telegram } from '@/assets/icons';
 
 import { navLinks } from '@/constants';
 
 const Footer = () => {
-	const { openTelegramChat, openWhatsAppChat } = getSocialMedia();
+	const { openTelegramChat } = getSocialMedia();
 	return (
 		<footer className='bg-[#090909] w-full pt-12 pb-6 flex relative justify-start overflow-hidden'>
 			<div className='grid sm:grid-cols-2 grid-cols-1  sm:grid-rows-1  gap-10 grid-rows-2 sm:gap-40 px-6 lg:px-8 xl:px-48 m-auto max-w-[1920px] w-full'>
@@ -22,10 +22,13 @@ const Footer = () => {
 						<li>Телефон: +7 (993) 492-28-00</li>
 						<li className='flex gap-4'>
 							<button>
-								<Image draggable={false} alt='telegram' src={whatsapp} onClick={openWhatsAppChat} />
-							</button>
-							<button>
-								<Image draggable={false} alt='whatsapp' src={telegram} onClick={openTelegramChat} />
+								<Image
+									width={30}
+									draggable={false}
+									alt='whatsapp'
+									src={telegram}
+									onClick={openTelegramChat}
+								/>
 							</button>
 						</li>
 					</ul>

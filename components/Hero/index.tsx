@@ -100,7 +100,7 @@ const Hero = () => {
 				<h2 className={styles.heroDescription}>
 					Дизайн, проектирование и разработка программного обеспечения.
 				</h2>
-				<Link href='tel:+7(993)492-28-00' className={styles.heroLink} role='link'>
+				<Link href='#contact-us' className={styles.heroLink} role='link'>
 					Обсудить проект
 				</Link>
 			</section>
