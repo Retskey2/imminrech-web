@@ -6,7 +6,7 @@ import React from 'react';
 
 import { getSocialMedia } from '@/hooks/getSocialMedia';
 
-import { telegram } from '@/assets/icons';
+import { phone, telegram } from '@/assets/icons';
 
 import { navLinks } from '@/constants';
 
@@ -21,6 +21,9 @@ const Footer = () => {
 						<li>Почта: 1@immin.tech</li>
 						<li>Телефон: +7 (993) 492-28-00</li>
 						<li className='flex gap-4'>
+							<Link href='tel:+7 (993) 492-28-00'>
+								<Image src={phone} width={24} alt='icon-phone' />
+							</Link>
 							<button>
 								<Image
 									width={30}
