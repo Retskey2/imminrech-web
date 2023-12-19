@@ -17,7 +17,14 @@
 body {
 	background: var(--background-rgb);
 	-webkit-tap-highlight-color: transparent;
+	overflow-x: hidden;
 	
+}
+
+@supports (-webkit-touch-callout: none) {
+    html {
+        overscroll-behavior-x: none;
+    }
 }
 
 @layer components {

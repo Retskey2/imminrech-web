@@ -91,7 +91,7 @@ const Navbar = () => {
 				</div>
 
 				{showNav && size.width < 1024 && (
-					<div className='fixed w-full min-h-[100dvh] h-full top-0 left-0 bg-[#121212] z-[100] grid grid-rows-navbarMini'>
+					<div className='fixed w-full min-h-[120dvh] h-full top-0 left-0 bg-[#121212] z-[100] grid grid-rows-navbarMini'>
 						<Image
 							className='-z-10'
 							alt='back-about'
