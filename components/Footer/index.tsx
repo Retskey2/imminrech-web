@@ -20,7 +20,7 @@ const Footer = () => {
 					<ul className='mt-8 grid grid-rows-3 gap-3 text-lg font-normal'>
 						<li>Почта: 1@immin.tech</li>
 						<li>Телефон: +7 (993) 492-28-00</li>
-						<li className='flex gap-4'>
+						<li className='flex gap-4 items-center flex-row'>
 							<a href='tel:+7 (993) 492-28-00'>
 								<Image src={phone} width={30} alt='icon-phone' />
 							</a>

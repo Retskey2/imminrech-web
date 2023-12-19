@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 import './globals.css';
+import { YandexMetrica } from '@/providers/YandexMetrica';
 
 export const metadata: Metadata = {
 	title: 'Immintech',
@@ -25,9 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body>
 				<Navbar />
 				<main>
-					{children}
-					<SpeedInsights />
-					<Analytics />
+					<YandexMetrica>
+						{children}
+						<SpeedInsights />
+						<Analytics />
+					</YandexMetrica>
 				</main>
 				<Footer />
 			</body>
