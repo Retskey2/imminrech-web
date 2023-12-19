@@ -39,7 +39,7 @@
 
 
 	.heroImage {
-		@apply relative h-full hidden justify-self-center md:flex md:w-[260px] lg:w-[355px] xl:w-[400px] 2xl:w-[480px];
+		@apply relative h-full hidden justify-self-center md:flex md:w-[260px] lg:w-[355px] xl:w-[400px] 2xl:w-[480px] overflow-x-hidden;
 
 		.heroImageBack {
 			@apply absolute top-6 w-full;
