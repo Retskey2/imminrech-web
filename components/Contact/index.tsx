@@ -4,6 +4,7 @@ import { InputMask } from '@react-input/mask';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import React, { useRef } from 'react';
+import toast from 'react-hot-toast';
 
 import styles from './Contact.module.scss';
 import { yourAction } from './actions';
@@ -36,6 +37,14 @@ const Contact = () => {
 					action={async (formData) => {
 						// current formData is not effected by .reset()
 						await yourAction(formData);
+
+						toast.success('Ваша заявка успешно отправлена!', {
+							style: {
+								borderRadius: '10px',
+								background: '#333',
+								color: '#fff'
+							}
+						});
 						//@ts-ignore
 						ref.current.reset();
 						replace('/');

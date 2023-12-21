@@ -3,12 +3,13 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 import Script from 'next/script';
+import { Toaster } from 'react-hot-toast';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 import './globals.css';
-import YandexMetrika, { YandexMetrica } from '@/providers/YandexMetrica';
+import YandexMetrika from '@/providers/YandexMetrica';
 
 export const metadata: Metadata = {
 	title: 'Immintech',
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<main>
 					<YandexMetrika />
 					{children}
+					<Toaster position='top-center' />
 					<SpeedInsights />
 					<Analytics />
 				</main>
